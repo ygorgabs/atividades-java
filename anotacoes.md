@@ -39,3 +39,15 @@ Tipos de cometários no Java
  **FAMILIA DE TIPOS**
 
 ![Familia dos tipos Java](<Captura de tela 2024-12-12 222018.png>)
+
+**Utilizando a classe Scanner para receber dados**
+
+`Scanner teclado = new Scanner(System.in);`
+
+```
+int idade = teclado.nextInt(); //para receber valores inteiros
+float salario = teclado.nextFloat(); //para receber valores reais
+String nome = teclado.nextLine(); //para receber strings
+```
+
+Existem outros tipos que o scanner pode receber(Olhar na IDE ou na internet).
