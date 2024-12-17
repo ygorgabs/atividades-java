@@ -123,3 +123,5 @@ Tabela Verdade desses operadores:
 
 ![Tabela Verdade OP](<Captura de tela 2024-12-16 215146.png>)
 
+É possivel usar mais de um operadore lógico em uma mesma expressão, dividindo com parenteses de acordo com o resultado que deseja. Exemplo: 
+`(idade<= 16 && idade <18 )|| (idade > 70)`
