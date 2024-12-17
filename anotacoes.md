@@ -50,6 +50,15 @@ String nome = teclado.nextLine(); //para receber strings
 
 Existem outros tipos que o scanner pode receber(Olhar na IDE ou na internet).
 
+Obs: em Java se voce fizer uma conta com inteiros ele vai entender que o resultado que deseja é inteiro. Exemplo:
+
+```
+int x = 8, y = 3;
+int w = x/y; // (8/3 = 2,66...)
+System.out.print(w); // w == 2
+```
+
+
 ## Operadores Aritméticos
 
 * Adicão (+)
