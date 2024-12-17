@@ -89,3 +89,37 @@ Arredondamentos com a classe Math:
 **Math.random** - gerador de números
 
 Cria um número aleatório entre 0 e 1 (valor double)
+
+## Operadores Lógicos e Relacionais
+
+### Operador Ternário
+
+Operação lógica simples, similar a um If..Else. Dividem em três componentes: a expressão; condição caso expressão seja verdadeira; e a condição caso a expressão seja falsa.
+
+**Estrutura**: 
+`int variavel = condicao ? valorSeTrue : valorSeFalse;`
+
+É uma estrutura mais simples, consegue atribuir valor somente a uma variável por vez.
+
+### Operadores Relacionais
+
+* Maior que (>)
+* Menor que (<)
+* Maior ou igual (>=)
+* Menor ou igual (<=)
+* Igual (==)
+* Diferente (!=)
+
+*__Obs__*: Ao tentar comparar alguma variável com o operador ==, cuidado se essas variável foram atribuidas em forma de Wrapper class(Exemplo: variáveis String). Neste caso use o método .equals().
+
+### Operadores Lógicos
+
+* .E. (&&)
+* .OU. (||)
+* .XOU. (^)
+* .NÃO. (!)
+
+Tabela Verdade desses operadores:
+
+![Tabela Verdade OP](<Captura de tela 2024-12-16 215146.png>)
+
