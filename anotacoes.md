@@ -139,4 +139,10 @@ Tabela Verdade desses operadores:
 
 ### Condição Simples
 
-Estrutura condicional simples é aquela que tem somente um If, que irá realizar um bloco de código caso a determinada condição seja verdade.
+Estrutura condicional simples é aquela que tem somente um **If**, que irá realizar um bloco de código caso a determinada condição seja verdade.
+
+
+### Condição Composta
+
+Estrutura condicional composta terá dois blocos de para executar, um se a condição proposta for verdadeira e outro se a condição for falsa. **Estrutura If...Else**
+
