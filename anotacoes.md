@@ -134,3 +134,9 @@ Tabela Verdade desses operadores:
 
 É possivel usar mais de um operadore lógico em uma mesma expressão, dividindo com parenteses de acordo com o resultado que deseja. Exemplo: 
 `(idade<= 16 && idade <18 )|| (idade > 70)`
+
+## Estruturas condicionais
+
+### Condição Simples
+
+Estrutura condicional simples é aquela que tem somente um If, que irá realizar um bloco de código caso a determinada condição seja verdade.
