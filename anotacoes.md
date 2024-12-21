@@ -141,10 +141,29 @@ Tabela Verdade desses operadores:
 
 Estrutura condicional simples é aquela que tem somente um **If**, que irá realizar um bloco de código caso a determinada condição seja verdade.
 
+Exemplo:
+
+```
+
+if (idade<= 16 && idade <18 ){
+    System.out.print("Voto Opcional")
+}
+```
 
 ### Condição Composta
 
 Estrutura condicional composta terá dois blocos de para executar, um se a condição proposta for verdadeira e outro se a condição for falsa. **Estrutura If...Else**
+
+Exemplo:
+
+```
+
+            if (i < 16){
+                    lblR.setText("Não vota!");
+            }else {
+                    lblR.setText("Voto Obrigatório");
+            }
+```
 
 ### Condição Encadeada
 
@@ -153,7 +172,7 @@ Estrutura que possui duas ou mais condições em sequência. E dentro de cada um
 Exemplo:
 
 ```
-int a = Integer.parseInt(txtAno.getText());
+                int a = Integer.parseInt(txtAno.getText());
                 int i = 2024 - a;
                 lblIdade.setText("Idade: "+ i);
                 if (i < 16){
@@ -164,3 +183,43 @@ int a = Integer.parseInt(txtAno.getText());
                     lblR.setText("Voto Obrigatório!");
                 }
 ```
+
+### Condição de Múltipla Escolha (Switch)
+
+Estrutura condicionais onde é possivel vários cenários de escolha dependendo do conteudo da váriavel. Cada cenário tem um bloco de código a ser realizado. **Estrutura Switch...Case**
+
+No java, ao final de cada bloco de código é necessário usar `break;`
+A opção `Default:` é a usada para caso nenhuma das opções anteriores seja verdadeira. É opcional.
+Switch não funciona para intervalos de números, é necessário criar um  caso para cada número. Essa estrutura só funciona com números inteiros, não sendo possível usar com variáveis double/float.
+
+Exemplo:
+
+```
+
+int perna = tec.nextInt();
+        String tipo;
+        System.out.print("Isso é um(a): ");
+
+        switch (perna){
+            case 1:
+                tipo = "Saci";
+                break;
+            case 2:
+                tipo = "Bípede";
+                break;
+            case 3:
+                tipo = "Tripé";
+                break;
+            case 4:
+                tipo = "Quadrúpede";
+                break;
+            case 6:
+                tipo = "Aranha";
+                break;
+            default:
+                tipo = "ET";
+        }
+        System.out.println(tipo);
+
+```
+
