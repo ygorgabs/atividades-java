@@ -146,3 +146,21 @@ Estrutura condicional simples é aquela que tem somente um **If**, que irá real
 
 Estrutura condicional composta terá dois blocos de para executar, um se a condição proposta for verdadeira e outro se a condição for falsa. **Estrutura If...Else**
 
+### Condição Encadeada
+
+Estrutura que possui duas ou mais condições em sequência. E dentro de cada uma das condições um bloco de código caso verdadeira. **Estrutura If... Else If... Else**
+
+Exemplo:
+
+```
+int a = Integer.parseInt(txtAno.getText());
+                int i = 2024 - a;
+                lblIdade.setText("Idade: "+ i);
+                if (i < 16){
+                    lblR.setText("Não vota!");
+                }else if ((i >= 16 && i <18)||i>70){
+                    lblR.setText("Voto Opcional");
+                } else {
+                    lblR.setText("Voto Obrigatório!");
+                }
+```
