@@ -223,3 +223,17 @@ int perna = tec.nextInt();
 
 ```
 
+## Estruturas de Repetição
+
+Estruturas de repetição executam um determinado bloco de código enquanto uma condição for verdadeira.
+
+### Repetição com Teste no Início
+
+Nessa estrutura a verificação se a condição é verdadeira ocorre no inicio da execução e vai repetir até que a condição se torne falsa. Esse bloco de código pode não ser executado caso a condição seja falsa logo no início. No Java é utilizado o `while`.
+
+**MUDANÇAS DE FLUXO DE UM LAÇO DE REPETIÇÃO**
+
+Existem comando que podem alterar o fluxo de execução de um bloco de código dentro de um laço de repetição.
+
+* `continue` : ao chegar nesse comando os próximos comandos são ignorados e o laço volta para a condição.
+* `break`: ao chegar nesse comando os próximos comandos serão ignorados e o laço é finalizado.
