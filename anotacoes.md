@@ -231,9 +231,44 @@ Estruturas de repetição executam um determinado bloco de código enquanto uma 
 
 Nessa estrutura a verificação se a condição é verdadeira ocorre no inicio da execução e vai repetir até que a condição se torne falsa. Esse bloco de código pode não ser executado caso a condição seja falsa logo no início. No Java é utilizado o `while`.
 
+Exemplo: 
+
+```
+int cc = 0;
+
+while(cc < 4){
+    System.out.print("Cambalhota");
+    cc++;
+}
+
+```
+
 **MUDANÇAS DE FLUXO DE UM LAÇO DE REPETIÇÃO**
 
 Existem comando que podem alterar o fluxo de execução de um bloco de código dentro de um laço de repetição.
 
 * `continue` : ao chegar nesse comando os próximos comandos são ignorados e o laço volta para a condição.
 * `break`: ao chegar nesse comando os próximos comandos serão ignorados e o laço é finalizado.
+
+### Repetição com Teste no Final
+
+Essa estrutura de repetição verifica se uma condição é verdadeira ao final da execução de um bloco de código. Garante que esse bloco seja executado ao menos uma vez. No java é utilizado o `do...while`.
+
+No java essa estrutura, diferente do portgol, funciona como um `while` invertido
+
+Exemplo:
+
+```
+int cc = 0;
+
+do{
+    System.out.print("Cambalhota");
+    cc++;
+}while(cc < 4);
+
+```
+
+**_OBS:_** Nessa estrutura de controle é necessário usar _ponto e virgula_ após a condição lógica.
+
+
+
