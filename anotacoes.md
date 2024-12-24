@@ -270,5 +270,19 @@ do{
 
 **_OBS:_** Nessa estrutura de controle é necessário usar _ponto e virgula_ após a condição lógica.
 
+### Repetição com Variável de controle
 
+Essa estutura diferente das outras já possui uma váriavel declarada nativamente dentro do comando para realizar a iteração. Estrutura ideal para repetir um bloco de codigo um exato determinado número de vezes. No java é utilizado o `for`.
+O incremento da váriavel de controle é realizado dentro da estrutra. No java o incremento é obrigatório.
 
+Exemplo:
+
+```
+for (int cc = 0; cc < 4; cc++){
+    System.out.print("Cambalhota");
+}
+```
+
+**LAÇOS ANINHADOS**
+
+É possível utilizar uma estrutura de repetição dentro da outra. No entanto, cabe apontar que ao iniciar o laço principal, será realizado todas as iterações do laço de dentro para, ai sim  finalizar iteração do laço principal.
