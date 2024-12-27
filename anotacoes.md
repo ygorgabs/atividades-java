@@ -254,7 +254,7 @@ Existem comando que podem alterar o fluxo de execução de um bloco de código d
 
 Essa estrutura de repetição verifica se uma condição é verdadeira ao final da execução de um bloco de código. Garante que esse bloco seja executado ao menos uma vez. No java é utilizado o `do...while`.
 
-No java essa estrutura, diferente do portgol, funciona como um `while` invertido
+No java essa estrutura, diferente do portugol, funciona como um `while` invertido
 
 Exemplo:
 
@@ -273,6 +273,7 @@ do{
 ### Repetição com Variável de controle
 
 Essa estutura diferente das outras já possui uma váriavel declarada nativamente dentro do comando para realizar a iteração. Estrutura ideal para repetir um bloco de codigo um exato determinado número de vezes. No java é utilizado o `for`.
+
 O incremento da váriavel de controle é realizado dentro da estrutra. No java o incremento é obrigatório.
 
 Exemplo:
@@ -285,4 +286,47 @@ for (int cc = 0; cc < 4; cc++){
 
 **LAÇOS ANINHADOS**
 
-É possível utilizar uma estrutura de repetição dentro da outra. No entanto, cabe apontar que ao iniciar o laço principal, será realizado todas as iterações do laço de dentro para, ai sim  finalizar iteração do laço principal.
+É possível utilizar uma estrutura de repetição dentro da outra. No entanto, cabe apontar que ao iniciar o laço principal, será realizado todas as iterações do laço de dentro para, ai sim,  finalizar iteração do laço principal.
+
+## Vetores
+
+Um vetor em Java é tratado como uma váriavel composta. Esses vetores também são objetos e possuem métodos e atributos. A primeira casa de um vetor, assim como em outras linguagens, é o 0.
+
+Exemplo de delaração de vetor: 
+
+`int num[] = new int [4];` 
+
+Atribuir valores em Java é simples. Para colocar em uma casa específica do vetor é so colocar o nome dele e entre colchetes o número da casa. Exemplo:
+
+` num[0] = 3; `
+
+Outra forma é declarar e popular o vetor e ao mesmo tempo. Exemplo:
+
+`int num[] = {3,5,8,2};`
+
+Todo vetor tem um tamanho e esse tamanho é definido ao declara-lo.
+
+### Foreach
+
+Estrutura de repetição usada para iterar dentro de um vetor. No java ele é uma espécie de for simplificado. A cada iteração a variavel criada dentro do for vai receber o valor da posição do vetor. Não é preciso declarar um contador.
+
+Exemplo:
+
+```
+int num[] = {3,5,8,2};
+
+for(int valor : num){
+    System.out.print(valor);
+}
+```
+
+### Classe Arrays
+
+O java tem uma classe chamada Arrays que é posível trabalhar mais facilmente com vetores, podendo colocar eles em ordem ou fazer uma busca dentro do vetor.
+
+* `Arrays.Sort(num);` - método para colocar o vetor em ordem crescente.
+* `Arrays.binarySearch(num,1);`- método que realiza um busca retorna em qual posição esta um valor dentro do vetor, sendo o primeiro parametro o vetor e o segundo parametro o que deseja buscar. Se não localizar ele vai retornar um valor negativo.
+* `Arrays.fill(num,0);` - método que pode ser usado para preencher todas as casas do vetor com um mesmo valor.
+
+**_OBS_** Não existem vetores com indices negativos no Java.
+
