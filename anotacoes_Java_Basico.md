@@ -363,5 +363,5 @@ int soma(int a, int b){
 int sm = soma(5,2);
 ```
 
-*_OBS_*: um método `static` ele é utilizavel apenas no contexto da classe. Se essa classe for instanciada, esse método estático não poderá ser utilizado. 
+*_OBS_*: um método `static` indica que ele pertence a classe que foi declarada e não a uma instancia dela. 
 *_OBS 2_*: não é possivel chamar um método não estático dentro de um método estático.
