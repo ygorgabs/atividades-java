@@ -330,3 +330,38 @@ O java tem uma classe chamada Arrays que é posível trabalhar mais facilmente c
 
 **_OBS_** Não existem vetores com indices negativos no Java.
 
+## Métodos
+
+É possível criar um bloco de código que pode ser reutilizado várias vezes para evitar repetições e deixar o código mais limpo. Em algoritmos são chamados de procedimentos e funções.
+Em Java, não existe uma palavra para definir uma função ou procedimento como `function` no JavaScript, por exemplo. 
+
+No lugar de funções, a linguagem utiliza _métodos_, que cumprem o mesmo papel, e são definidos pelo seu tipo de retorno.
+
+### Método sem retorno - *void*  - Exemplo:
+
+Esse tipo de método não retorna nada para onde ele está sendo chamado, apenas executa o bloco de código.
+
+```
+void soma(int a, int b){
+    int s = a+b;
+    System.out.print(s);
+}
+
+soma(5,2);
+```
+
+### Método com retorno - *tipo primitivo(int, String, float...)* - Exemplo:
+
+Esses tipo de método irá retornar para onde ele está sendo chamado um valor de acordo com o tipo primitivo escolhido ao criá-lo
+
+```
+int soma(int a, int b){
+    int s = a+b;
+    return s;
+}
+
+int sm = soma(5,2);
+```
+
+*_OBS_*: um método `static` ele é utilizavel apenas no contexto da classe. Se essa classe for instanciada, esse método estático não poderá ser utilizado. 
+*_OBS 2_*: não é possivel chamar um método não estático dentro de um método estático.
