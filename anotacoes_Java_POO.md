@@ -65,3 +65,35 @@ Definição bibliografica:
 **Classe** define os atributos e métodos comuns que serão compartilhados por um objeto.
 
 **Objeto** é uma instância de uma classe.
+
+## Visibilidade de um Objeto
+
+A visibilidade indica o nível de acesso aos componentes de uma classe. Existem 3
+
+* Público (+) - O objeto *public* pode ser usado por qualquer um onde ele esteja disponível. Todas as classes tem acesso.
+* Privado (-) - O objeto *private* somente uma "pessoa" tem acesso a esse objeto. Somente a classe atual tem acesso.
+* Protegido (#) - O objeto *protected* somente quem tem a permissão pode usar. A Somente a classe atual e suas subclasses tem acesso.
+
+Exemplo:
+
+```
+Classe Caneta
+    publico modelo: Caractere
+    publico cor: Caractere
+    privado ponta: Real
+    protegido carga: Inteiro
+    protegido tampada: Lógico
+
+    publico Metodo rabiscar()
+        Se(tampada) entao
+            Escreva(Erro)
+        Senao
+            Escreva("Rabisco")
+        Fimse
+    FimMetodo
+FimClasse
+```
+
+**OBS**: Toda linguagem de programação define uma visibilidade padrão para os objetos, que podem ser modificadas declarando-as como no exemplo
+
+**OBS 2**: Procurar sobre UML e Diagrama de Classes
