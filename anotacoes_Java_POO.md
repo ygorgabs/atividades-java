@@ -103,7 +103,7 @@ public class Caneta {
 
 ## Métodos Especiais
 
-Métodos em geral podem ser criados seguindo a lógica conveniente ou usando o nome que o dev achar mais adequado. No entanto existem alguns métodos com funções específicas em que, por convenção se usa padrões para criá-los e nomeá-los. 
+Métodos em geral podem ser criados seguindo a lógica conveniente ou usando o nome que o dev achar mais adequado. No entanto existem alguns métodos com funções específicas em que, por convenção, se usa padrões para criá-los e nomeá-los. 
 
 ### Método Acessor (Getter)
 
@@ -174,6 +174,7 @@ Caneta c1 = new Caneta("BIC","Azul",0.5f);
 ```
 
 _**OBS**_: No Java não precisa colocar o tipo de retorno no método construtor e o nome do método tem que ser o mesmo nome da classe.
+
 _**OBS 2**_: Em algumas IDEs é possível gerar os métodos getter, setter e constructor automaticamente. Exemplo: **IntelliJ alt+insert**
 
 
