@@ -48,7 +48,7 @@ Classe Caneta
 FimClasse
 ```
 
-* __Instaciar__ : gerar um objeto a partir de uma classe. Exemplo:
+* __Instanciar__ : gerar um objeto a partir de uma classe. Exemplo:
 
 ```
 c1 = nova Caneta
@@ -97,3 +97,92 @@ FimClasse
 **OBS**: Toda linguagem de programação define uma visibilidade padrão para os objetos, que podem ser modificadas declarando-as como no exemplo
 
 **OBS 2**: Procurar sobre UML e Diagrama de Classes
+
+## Métodos Especiais
+
+Métodos em geral podem ser criados seguindo a lógica conveniente ou usando o nome que o dev achar mais adequado. No entanto existem alguns métodos com funções específicas em que, por convenção se usa padrões para criá-los e nomeá-los. 
+
+### Método Acessor (Getter)
+
+Por segurança definimos um nível de acesso private ou protected para algum atributo de uma classe, porém a informação desse atributo pode ser necessária. É nesses casos, onde o usamos os métodos getter.
+
+### Métodos Modificadores (Setter)
+
+São métodos modificam o status de um atributo da classe. Pelos mesmos motivos do método acessor é necessário restringir o acesso direto ao atributo, mas é possível modificar usando esses métodos. Normalmente, são métodos que exigem um parâmetro do usuário para serem executados e esses parâmetros serão tratados dentro do método para, ai sim, modificar o atributo.
+
+Exemplo de criação:
+
+```
+Classe Caneta
+    publico modelo: Caractere
+    privado ponta: Real
+
+    publico Metodo getModelo()
+        retorne modelo
+    FimMetodo
+
+    publico Metodo setModelo(m:Caractere)
+        modelo = m
+    FimMetodo
+
+    publico Metodo getPonta()
+        retorne ponta
+    FimMetodo
+
+    publico Metodo setPonta(p:Real)
+        ponta = p
+    FimMetodo
+FimClasse
+```
+
+Exemplo de uso:
+
+```
+c1 = nova Caneta
+c1.setModelo("Bic Cristal")
+c1.setPonta(0.5)
+Escreva(c1.getModelo())
+Escreva(c1.getPonta())
+```
+
+### Método Construtor (Construct)
+
+Método que irá ser chamado para executar automaticamente algum procedimento ou modificação sem a interferência direta do usuário. Esses métodos são chamados assim que o objeto é criado e podem receber parâmetros ou não.
+
+Exemplos:
+
+```
+Classe Caneta
+    
+    Metodo construtor()
+        tampar()
+        cor = "Azul"
+    FimMetodo
+FimClasse
+
+c1 = nova Caneta
+```
+
+```
+Classe Caneta
+    
+    Metodo construtor(m:caractere,c:caractere,p:real)
+        setModelo(m)
+        setPonta(p)
+        setCor(c)
+    FimMetodo
+FimClasse
+
+c1 = nova Caneta("Bic","Azul",0.5)
+```
+
+
+
+
+
+
+
+
+
+
+
