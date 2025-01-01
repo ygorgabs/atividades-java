@@ -31,31 +31,32 @@ O estado de uma classe/objeto é definido em um momento específico.
 * __Classe__ : pode ser considerado um molde para criar um objeto. Exemplo:
 
 ```
-Classe Caneta
-    modelo: Caractere
-    cor: Caractere
-    ponta: Real
-    carga: Inteiro
-    tampada: Lógico
+public class Caneta {
 
-    Metodo rabiscar()
-        Se(tampada) entao
-            Escreva(Erro)
-        Senao
-            Escreva("Rabisco")
-        Fimse
-    FimMetodo
-FimClasse
+    String modelo;
+    String cor;
+    float ponta;
+    int carga;
+    boolean tampada;
+
+    void rabiscar(){
+        if(this.tampada){
+            System.out.println("ERRO! Não posso Rabiscar");
+        }else{
+            System.out.println("Estou rabiscando");
+        }
+    }
+}
 ```
 
 * __Instanciar__ : gerar um objeto a partir de uma classe. Exemplo:
 
 ```
-c1 = nova Caneta
-c1.cor = "Azul"
-c1.ponta = 0.5
-c1.tampada = "falso"
-c1.rabiscar() // esse é um método pois tem parenteses
+Caneta c1 = new Caneta();
+c1.cor = "Azul";
+c1.ponta = 0.5f;
+c1.tampada = "falso";
+c1.rabiscar(); // esse é um método pois tem parenteses
 
 ```
    * É possível criar vários objetos com atributos diferentes usando a mesma classe.
@@ -77,21 +78,23 @@ A visibilidade indica o nível de acesso aos componentes de uma classe. Existem 
 Exemplo:
 
 ```
-Classe Caneta
-    publico modelo: Caractere
-    publico cor: Caractere
-    privado ponta: Real
-    protegido carga: Inteiro
-    protegido tampada: Lógico
+public class Caneta {
 
-    publico Metodo rabiscar()
-        Se(tampada) entao
-            Escreva(Erro)
-        Senao
-            Escreva("Rabisco")
-        Fimse
-    FimMetodo
-FimClasse
+    public String modelo;
+    public String cor;
+    private float ponta;
+    protected int carga;
+    private boolean tampada;
+
+    public void rabiscar(){
+        if(this.tampada){
+            System.out.println("ERRO! Não posso Rabiscar");
+        }else{
+            System.out.println("Estou rabiscando");
+        }
+    }
+
+}
 ```
 
 **OBS**: Toda linguagem de programação define uma visibilidade padrão para os objetos, que podem ser modificadas declarando-as como no exemplo
@@ -113,36 +116,36 @@ São métodos modificam o status de um atributo da classe. Pelos mesmos motivos 
 Exemplo de criação:
 
 ```
-Classe Caneta
-    publico modelo: Caractere
-    privado ponta: Real
+public class Caneta {
+    private String modelo;
+    private float ponta;
 
-    publico Metodo getModelo()
-        retorne modelo
-    FimMetodo
+    public String getModelo(){
+        return this.modelo;
+    }
 
-    publico Metodo setModelo(m:Caractere)
-        modelo = m
-    FimMetodo
+    public void setModelo(String m){
+        this.modelo = m;
+    }
 
-    publico Metodo getPonta()
-        retorne ponta
-    FimMetodo
+    public float getPonta(){
+        return this.ponta;
+    }
 
-    publico Metodo setPonta(p:Real)
-        ponta = p
-    FimMetodo
-FimClasse
+    public void setPonta(float p){
+        this.ponta = p;
+    }
+}
 ```
 
 Exemplo de uso:
 
 ```
-c1 = nova Caneta
-c1.setModelo("Bic Cristal")
-c1.setPonta(0.5)
-Escreva(c1.getModelo())
-Escreva(c1.getPonta())
+Caneta c1 = new Caneta();
+c1.setModelo("Bic Cristal");
+c1.setPonta(0.5);
+System.out.print(c1.getModelo());
+System.out.print(c1.getPonta());
 ```
 
 ### Método Construtor (Construct)
@@ -152,29 +155,27 @@ Método que irá ser chamado para executar automaticamente algum procedimento ou
 Exemplos:
 
 ```
-Classe Caneta
-    
-    Metodo construtor()
-        tampar()
-        cor = "Azul"
-    FimMetodo
-FimClasse
+public Caneta(){
+        this.tampada();
+        this.cor = "Azul";
+    } // Metodo construtor sem parametros
 
-c1 = nova Caneta
+Caneta c1 = new Caneta();
 ```
 
 ```
-Classe Caneta
-    
-    Metodo construtor(m:caractere,c:caractere,p:real)
-        setModelo(m)
-        setPonta(p)
-        setCor(c)
-    FimMetodo
-FimClasse
+public Caneta(String m, String c, float p){
+        this.modelo = m;
+        this.cor = c;
+        this.ponta = p;
+    } //metodo construtor com parametros
 
-c1 = nova Caneta("Bic","Azul",0.5)
+Caneta c1 = new Caneta("BIC","Azul",0.5f);
 ```
+
+_**OBS**_: No Java não precisa colocar o tipo de retorno no método construtor e o nome do método tem que ser o mesmo nome da classe.
+_**OBS 2**_: Em algumas IDEs é possível gerar os métodos getter, setter e constructor automaticamente. Exemplo: **IntelliJ alt+insert**
+
 
 
 
