@@ -177,14 +177,22 @@ _**OBS**_: No Java não precisa colocar o tipo de retorno no método construtor 
 
 _**OBS 2**_: Em algumas IDEs é possível gerar os métodos getter, setter e constructor automaticamente. Exemplo: **IntelliJ alt+insert**
 
+## Exemplo Prático
 
+A atividade consiste em criar uma classe de conta bancária. Caracteristicas dessa classe:
 
+- Tipo da conta receberá os valores CC - conta corrente e CP - conta poupança
+- Metodo abrir conta e fechar conta altera o status
+- Quando abre a conta é necessario informar o tipo
+- Quando abre a conta corrente ganha 50 e quando é poupança ganha 150
+- Fechar conta nao pode ter saldo positivo ou negativo
+- Deposito o status e verdadeiro 
+- Saque o status verdadeiro e saldo
+- Mensalidade sera cobrada direta do saldo. cc 12 reais cp 20 reais
+- Todos os atributos devem ter o get e set
+- Metodo construtor status falso e saldo 0
 
-
-
-
-
-
+Aqui vou colocar o algoritmo da classe e o exercício em Java vai estar em [aqui]()
 
 
 
