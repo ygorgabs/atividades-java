@@ -54,7 +54,16 @@ public class ContaBanco {
         this.status = s;
     }
 
-    // Metodos da conta
+    // Metodos personalizados
+
+    public void estadoAtual(){
+        System.out.println("--------------------------");
+        System.out.println("Conta: "+ getNumConta());
+        System.out.println("Tipo: "+ getTipo());
+        System.out.println("Dono: "+getDono());
+        System.out.println("Saldo: "+ getSaldo());
+        System.out.println("Aberta: "+ getStatus());
+    }
 
     public void abrirConta(String t){
         setTipo(t);
@@ -65,6 +74,8 @@ public class ContaBanco {
         }else if(this.tipo.equals("CP")){
             setSaldo(150);
         }
+
+        System.out.println("Conta aberta com sucesso");
     }
 
     public void fecharConta(){
@@ -74,21 +85,24 @@ public class ContaBanco {
             System.out.println("Por favor, quite os debitos antes de fechar a conta");
         }else{
             setStatus(false);
+            System.out.println("Conta fechada com sucesso");
         }
     }
 
-    public void depositar(Double valor){
+    public void depositar(double valor){
         if(this.status){
             setSaldo(getSaldo() + valor);
+            System.out.println("Deposito realizado na conta de " + getDono());
         }else{
             System.out.println("A conta precisa estar ativa para depositar");
         }
     }
 
-    public void sacar(Double valor){
+    public void sacar(double valor){
         if(this.status){
-            if(this.saldo > valor){
+            if(this.saldo >= valor){
                 setSaldo(getSaldo() - valor);
+                System.out.println("Saque realizado na conta de " + getDono());
             }else{
                 System.out.println("Saldo insuficiente");
             }
@@ -109,6 +123,7 @@ public class ContaBanco {
         if(status){
             if(saldo>v){
                 setSaldo(getSaldo()-v);
+                System.out.println("Mensalidade paga com sucesso");
             }else{
                 System.out.println("Saldo Insuficiente");
             }
