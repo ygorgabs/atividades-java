@@ -248,7 +248,7 @@ publico Metodo sacar(valor:real)
        se (saldo > valor) entao
             saldo <- saldo - valor
         senao
-            Escreval("Saldo insuficiente)
+            Escreval("Saldo insuficiente")
         FimSe
     senao
         Escreval("Impossivel sacar")
