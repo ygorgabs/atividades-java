@@ -202,3 +202,6 @@ As interfaces não possuem atributos, somente métodos. Esses são métodos abst
 Quando se realiza o encapsulamento, todos os atributos de uma classe serão privados. Na classe deve ser indicado que ela implementará os metodos da interface(esses métodos serão colocados dentro da classe). Além desses métodos, devem ser implentados os getters e setters, visto que os atributos estão privados.
 
 A interface é implementada em um arquivo diferente da classe.
+
+* No Java utilizamos o modificador `abstract` nos métodos criados dentro das interfaces
+* Para implentar uma interface numa classe usamos o `implements`. Exemplo: `public class ControleRemoto implements Controlador`
