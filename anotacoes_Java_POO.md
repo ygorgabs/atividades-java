@@ -178,3 +178,27 @@ _**OBS**_: No Java não precisa colocar o tipo de retorno no método construtor 
 _**OBS 2**_: Em algumas IDEs é possível gerar os métodos getter, setter e constructor automaticamente. Exemplo: **IntelliJ alt+insert**
 
 _**OBS 3**_: É uma boa prática usar os metodos get e set até mesmo dentro da classe original.
+
+## Encapsulamento
+
+Conceito de encapsulamento: Ocultar partes independentes da implementação, permitindo construir partes invisíveis ao mundo exterior.
+
+Um software encapsulado segue padrões que irá proteger o usuario(dev) do código, evitando que um codigo "estrague" o trabalho do dev e que o dev "estrague" o codigo encapsulado. resumidamente é um envolucro que protege um código e padroniza ao mesmo tempo.
+
+Um objeto encapsulado ele trabalha através de mensagens que irá receber e enviar informações para o usuario. Para o usuario saber o que aquele objeto faz será utilizado as interfaces que estabelecem esses limites do que aquele objeto é capaz de fazer.
+
+Conceito de interface: Lista de serviços fornecidas por um componente. É o contato externo, que define o que pode ser feito com um objeto dessa classe.
+
+_**OBS**_: Encapsular não é obrigatório, mas é uma boa prática de POO.
+
+Vantagens:
+
+* Tornar mudanças invisíveis
+* Facilitar reutilizar código
+* Reduzir efeitos colaterais
+
+As interfaces não possuem atributos, somente métodos. Esses são métodos abstratos, pois não executam ação dentro do método, apenas indica a ação que será realizada. Todos os métodos da interface são publicos.
+
+Quando se realiza o encapsulamento, todos os atributos de uma classe serão privados. Na classe deve ser indicado que ela implementará os metodos da interface(esses métodos serão colocados dentro da classe). Além desses métodos, devem ser implentados os getters e setters, visto que os atributos estão privados.
+
+A interface é implementada em um arquivo diferente da classe.
