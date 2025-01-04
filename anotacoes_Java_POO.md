@@ -205,3 +205,7 @@ A interface é implementada em um arquivo diferente da classe.
 
 * No Java utilizamos o modificador `abstract` nos métodos criados dentro das interfaces
 * Para implentar uma interface numa classe usamos o `implements`. Exemplo: `public class ControleRemoto implements Controlador`
+
+## Relacionamento entre classes
+
+
