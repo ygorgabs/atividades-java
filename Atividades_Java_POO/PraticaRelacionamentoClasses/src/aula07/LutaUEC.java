@@ -10,6 +10,9 @@ public class LutaUEC {
          l[4] = new Lutador("UFOCobol", "Brasil",37,119.3f,1.70f,5,4,3);
          l[5] = new Lutador("Nerdaart","EUA",30,105.7f,1.81f,12,2,4);
 
+        Luta uec01 = new Luta();
 
+        uec01.marcarLuta(l[0],l[1]);
+        uec01.lutar();
     }
 }

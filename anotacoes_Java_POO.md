@@ -208,4 +208,29 @@ A interface é implementada em um arquivo diferente da classe.
 
 ## Relacionamento entre classes
 
+Além de atributos e métodos é possível com as classes criar relacionamentos entre elas.
 
+### Relacionamento por agregação
+
+Tipo abstrato de dados: transformar as classes em determinados tipos, criando, dessa forma, uma instancia de uma classe dentro de outra. Exemplo:
+
+_Classe lutador instanciada dentro da classe Luta_
+
+```
+ public class Luta {
+    private Lutador desafiado;
+    private Lutador desafiante;
+    private int rounds;
+}
+```
+
+É possível usar tipos abstratos como parametros nos métodos.
+
+Se usado um tipo abstrato de dados, também é possível utilizar no objeto desse tipo os métodos da classe instanciada. Exemplo: `desafiado.getCategoria();`
+
+- Se existir um relacionamento entre as classes, deve ter um **papel**, um verbo que identifica essa relação. No caso das classes lutador e luta é o verbo **disputa**.
+- Toda relação tem sua multiplicidade, que é o nivel de ocorrencia daquela relação. Exemplo: um lutador pode disputar **nenhuma ou várias lutas**, e uma luta pode ser disputada por **vários** lutadores.
+
+**OBS:** O relacionamento dentro Diagrama de Classes é uma evolução do Diagrama de Entidade-Relacionamento(DER), por isto as semelhanças. No entanto, no Diagrama de Classes possui dados(atributos) e métodos, dirente do DER que só possui dados.
+
+Um relacionamento por agregação é do tipo _tem um_. Determinada classe A tem um atributo que pertence a classe B, ou é uma instancia, criando assim o relacionamento com a outra classe.
