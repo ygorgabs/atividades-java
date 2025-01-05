@@ -61,7 +61,7 @@ public class Lutador {
 
     public void setPeso(float peso){
         this.peso = peso;
-        setCategoria();
+        this.setCategoria();
     }
 
     public String getCategoria(){
@@ -109,10 +109,10 @@ public class Lutador {
     // Métodos personalizados
 
     public void apresentar(){
-        System.out.println("Lutador");
+        System.out.println("Chegou a hora de começar a luta");
         System.out.println("----------------");
-        System.out.println("Nome: " + getNome());
-        System.out.println("Origem: " + getNacionalidade());
+        System.out.println("Apresentando o " + getNome());
+        System.out.println("Diretamente de " + getNacionalidade());
         System.out.println(getIdade() + " anos");
         System.out.println(getAltura() + " m de altura");
         System.out.println("Pesando " + getPeso() + "kg");
