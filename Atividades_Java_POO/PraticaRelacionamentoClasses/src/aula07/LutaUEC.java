@@ -12,7 +12,9 @@ public class LutaUEC {
 
         Luta uec01 = new Luta();
 
-        uec01.marcarLuta(l[0],l[1]);
+        uec01.marcarLuta(l[4],l[5]);
         uec01.lutar();
+
+
     }
 }
