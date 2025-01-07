@@ -234,3 +234,12 @@ Se usado um tipo abstrato de dados, também é possível utilizar no objeto dess
 **OBS:** O relacionamento dentro Diagrama de Classes é uma evolução do Diagrama de Entidade-Relacionamento(DER), por isto as semelhanças. No entanto, no Diagrama de Classes possui dados(atributos) e métodos, dirente do DER que só possui dados.
 
 Um relacionamento por agregação é do tipo _tem um_. Determinada classe A tem um atributo que pertence a classe B, ou é uma instancia, criando assim o relacionamento com a outra classe.
+
+## Herança
+
+Conceito: Permite basear uma nova classe na definição de outra classe previamente existente. A herança é aplicada tanto para as características(atributos), quanto para os comportamentos(métodos)
+
+Com a herança é possível criar uma classe sem precisar escrever tudo do zero, herdando elementos de outra classe.
+
+* Classe Mãe(superclasse): quem passa as suas características e métodos.
+* Classe Filha(subclasse): quem herda as características e métodos da classe mãe. Nesse caso, não necessita declarar novamente os métodos e atributos da superclasse, pois automaticamente serão associados a subclasse.
