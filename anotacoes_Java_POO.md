@@ -243,3 +243,4 @@ Com a herança é possível criar uma classe sem precisar escrever tudo do zero,
 
 * Classe Mãe(superclasse): quem passa as suas características e métodos.
 * Classe Filha(subclasse): quem herda as características e métodos da classe mãe. Nesse caso, não necessita declarar novamente os métodos e atributos da superclasse, pois automaticamente serão associados a subclasse.
+
