@@ -244,3 +244,24 @@ Com a herança é possível criar uma classe sem precisar escrever tudo do zero,
 * Classe Mãe(superclasse): quem passa as suas características e métodos.
 * Classe Filha(subclasse): quem herda as características e métodos da classe mãe. Nesse caso, não necessita declarar novamente os métodos e atributos da superclasse, pois automaticamente serão associados a subclasse.
 
+**OBS**: O conceito de superclasse e subclasse depende do ponto de vista. Um classe mãe também pode ser uma classe filha de outra. Um classe que não tem uma classe mãe é chamada de raiz. Já as subclasses que não dão origem a outras classes são chamadas de folhas.
+
+* Classe ancestral: que ligação indireta com outra classe, sem considerar a classe mãe.
+* Classe descendente: recebe herança indeireta de outra classe, sem ser sua subclasse.
+
+### Herança de implementação
+
+É uma herança pobre, pois não implementa mais nenhum método ou atributo, somente herda da superclasse. Utilizada para implementar uma classe abstrata.
+
+### Herança para diferença
+
+É uma herança forte, pois a subclasse que herda os métodos e atributos, também vai implementar os seus próprios.
+
+### Abstrato e Final
+
+As classes e métodos podem ser abstratas ou finais. Conceito:
+
+* Classe abstrata: não pode ser instanciada. Só pode servir como progenitora(superclasse).
+* Método abstrato: que é declarado, mas não implementado na progenitora. Só pode ser colocado dentro de uma interface ou classe abstrata.
+* Classe final: Não pode ser herdada por outra classe. Obrigatoriamente folha.
+* Método final: Não pode ser sobrescrito pelas subclasses. Obrigatoriamente herdado.
