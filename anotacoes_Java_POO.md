@@ -268,3 +268,12 @@ As classes e métodos podem ser abstratas ou finais. Conceito:
 
 ## Polimorfismo
 
+**Polimorfo**: Muitas formas - Permite que um mesmo nome represente vários comportamentos diferentes.
+
+* Assinatura do método: Quantidade e os tipos dos parâmetros do método. Métodos com essas caracterísitcas iguais tem a mesma assinatura.
+
+### Polimorfismo de Sobreposição
+
+Conceito: acontece quando substiruímos um método de uma super classe na sua subclasse, usando a mesma assinatura.
+
+- Nesse casso usamos o `@override` para sobrescrever o já proposto na classe mãe, alterar o comportamento de um método, mas sem alterar os tipos e os parâmetros desse método.
