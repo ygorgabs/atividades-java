@@ -265,3 +265,6 @@ As classes e métodos podem ser abstratas ou finais. Conceito:
 * Método abstrato: que é declarado, mas não implementado na progenitora. Só pode ser colocado dentro de uma interface ou classe abstrata.
 * Classe final: Não pode ser herdada por outra classe. Obrigatoriamente folha.
 * Método final: Não pode ser sobrescrito pelas subclasses. Obrigatoriamente herdado.
+
+## Polimorfismo
+
