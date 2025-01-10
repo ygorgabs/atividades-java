@@ -274,6 +274,16 @@ As classes e métodos podem ser abstratas ou finais. Conceito:
 
 ### Polimorfismo de Sobreposição
 
-Conceito: acontece quando substiruímos um método de uma super classe na sua subclasse, usando a mesma assinatura.
+Conceito: acontece quando substituímos um método de uma super classe na sua subclasse, usando a mesma assinatura.
 
-- Nesse casso usamos o `@override` para sobrescrever o já proposto na classe mãe, alterar o comportamento de um método, mas sem alterar os tipos e os parâmetros desse método.
+- Nesse casso, no Java usamos o `@Override` para sobrescrever o método já proposto na classe mãe e alteramos o comportamento dele.
+- A sobreposição acontece somente uma vez para o método dentro da classe e para realiza-la é obrigatório manter a mesma assinatura do método. 
+
+### Polimorfismo de Sobrecarga
+
+No Polimorfismo de Sobrecarga utilizamos vários métodos com o mesmo nome, porém com assinaturas diferentes (diferindo em número, tipo ou ordem dos parâmetros). Eles devem estar dentro da mesma classe. Esse tipo de polimorfismo permite usar diferentes soluções para uma mesma ação, de acordo com o contexto em que o método é utilizado, ou seja a assinatura.
+
+
+**RESUMO**
+
+![Tipos de Polimorfismo](image.png)
