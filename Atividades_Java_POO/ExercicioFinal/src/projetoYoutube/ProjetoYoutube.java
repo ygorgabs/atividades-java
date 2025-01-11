@@ -13,7 +13,12 @@ public class ProjetoYoutube {
         g[0] = new Gafanhoto("ygor",24,"M","ygs");
         g[1] = new Gafanhoto("Bruno", 23, "M", "bru");
 
+        System.out.println("VIDEOS\n----------------------------");
         System.out.println(v[0].toString());
+        System.out.println(v[1].toString());
+        System.out.println(v[2].toString());
+        System.out.println("\nGAFANHOTOS\n---------------------------");
         System.out.println(g[0].toString());
+        System.out.println(g[1].toString());
     }
 }
