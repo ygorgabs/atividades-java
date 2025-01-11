@@ -365,3 +365,23 @@ int sm = soma(5,2);
 
 *_OBS_*: um método `static` indica que ele pertence a classe que foi declarada e não a uma instancia dela. 
 *_OBS 2_*: não é possivel chamar um método não estático dentro de um método estático.
+
+
+## Extras - Informações adicionais sobre classes e métodos básicos do Java
+
+---
+
+`Locale.setDefault(Locale.US)` - método utilizado para alterar o tipo de separador de ponto decimal. Tem que ser usado antes do método de saída.
+
+---
+
+`System.out.printf(Texto1 %f Texto2 %d Texto3 %s %n);` - método utilizado para concatenar textos e variáveis. Para concatenar as variáveis usamos os seguintes parametros:
+
+* %f - variaveis float ou double
+* %d - variaveis inteiros
+* %s - variaveis strings
+* %n - quebra de linha
+
+---
+
+`.charAt(n)` - método utilizado em objetos do tipo String para pegar um caractere específico do texto e transformar num char. **n** nesse caso é o parametro que indica qual a posição do caractere que deseja.
