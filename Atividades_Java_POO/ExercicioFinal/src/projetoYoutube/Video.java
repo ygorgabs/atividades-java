@@ -1,11 +1,19 @@
-package classes;
+package projetoYoutube;
 
 public class Video implements AcoesVideo{
     private String titulo;
-    private String avaliacao;
+    private int avaliacao;
     private int views;
     private int curtidas;
     private boolean reproduzindo;
+
+    public Video(String titulo) {
+        this.titulo = titulo;
+        this.avaliacao = 1;
+        this.views = 0;
+        this.curtidas = 0;
+        this.reproduzindo = false;
+    }
 
     public String getTitulo() {
         return titulo;
@@ -15,11 +23,11 @@ public class Video implements AcoesVideo{
         this.titulo = titulo;
     }
 
-    public String getAvaliacao() {
+    public int getAvaliacao() {
         return avaliacao;
     }
 
-    public void setAvaliacao(String avaliacao) {
+    public void setAvaliacao(int avaliacao) {
         this.avaliacao = avaliacao;
     }
 
@@ -66,11 +74,20 @@ public class Video implements AcoesVideo{
     }
 
     @Override
-    public void like(boolean like) {
+    public void like() {
 
-        if(like){
             this.setCurtidas(this.getCurtidas()+1);
-        }
 
+    }
+
+    @Override
+    public String toString() {
+        return "Video{" +
+                "titulo='" + titulo + '\'' +
+                ", avaliacao=" + avaliacao +
+                ", views=" + views +
+                ", curtidas=" + curtidas +
+                ", reproduzindo=" + reproduzindo +
+                '}';
     }
 }
