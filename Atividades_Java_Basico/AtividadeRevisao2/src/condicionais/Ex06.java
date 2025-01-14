@@ -20,5 +20,7 @@ public class Ex06 {
         }else{
             System.out.println("Fora do intervalo");
         }
+
+        ent.close();
     }
 }
