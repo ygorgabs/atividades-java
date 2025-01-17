@@ -25,5 +25,7 @@ public class Ex03 {
         for(int i = 0; i < qtd; i++){
             System.out.printf("%.1f%n",media[i]);
         }
+
+        ent.close();
     }
 }

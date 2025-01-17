@@ -21,5 +21,6 @@ public class Ex02 {
         }
 
         System.out.printf("%d in%n%d out",in,out);
+        ent.close();
     }
 }
