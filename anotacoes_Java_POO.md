@@ -287,3 +287,16 @@ No Polimorfismo de Sobrecarga utilizamos vários métodos com o mesmo nome, por�
 **RESUMO**
 
 ![Tipos de Polimorfismo](image.png)
+
+## Extras - informação adicional sobre POO no Java
+
+### Classe Object e toString()
+
+Todas as classes do Java são subclasses da classe Object e herdam os seguintes métodos:
+
+* getClass: retorna o tipo de objeto
+* equals: compara se dois objetos são iguais
+* hashCode: retorna o código hash do objeto
+* toString: converte o objeto para String
+
+O método toString pode ser sobrescrito na classe criada para apresentar o conteudo necessário. Dentro de metodos de saida como `System.out.print()` se usarmos como parametro um objeto instanciado sem explicitar o método, automaticamente o Java chama o método toString.
