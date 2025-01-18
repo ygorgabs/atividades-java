@@ -27,6 +27,7 @@ public class CalculaSalario {
 		
 		System.out.println();
 		System.out.println("Dados atualizados: " + empregado.toString());
+		ent.close();
 	}
 
 }

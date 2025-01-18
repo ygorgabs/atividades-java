@@ -14,6 +14,7 @@ public class CalculaRetangulo {
 		ret.largura = ent.nextDouble();
 		
 		System.out.printf("Area = %.2f%nPerimetro = %.2f%nDiagonal = %.2f",ret.area(),ret.perimetro(),ret.diagonal());
+		ent.close();
 	}
 
 }
