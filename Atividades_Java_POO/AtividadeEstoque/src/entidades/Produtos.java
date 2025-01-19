@@ -10,6 +10,11 @@ public class Produtos {
     	this.preco = preco;
     	this.quantidade = quantidade;
     }
+    
+    public Produtos(String nome, double preco) {
+    	this.nome = nome;
+    	this.preco = preco;
+    } // exemplo de sobrecarga - utilizando diferentes construtores na mesma classe
 
     public double valorTotalNoEstoque(){
         return preco * quantidade;
