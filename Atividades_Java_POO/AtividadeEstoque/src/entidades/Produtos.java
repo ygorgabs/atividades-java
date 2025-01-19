@@ -5,38 +5,56 @@ public class Produtos {
     private double preco;
     private int quantidade;
     
+   
+    
     public Produtos() {
-    	
-    }
-    
-    public Produtos(String nome, double preco, int quantidade) {
-    	this.nome = nome;
-    	this.preco = preco;
-    	this.quantidade = quantidade;
-    }
-    
-    public Produtos(String nome, double preco) {
-    	this.nome = nome;
-    	this.preco = preco;
-    } // exemplo de sobrecarga - utilizando diferentes construtores na mesma classe
+		super();
+	}
 
-    public void setNome(String nome) {
-    	this.nome = nome;
-    }
+
+	public Produtos(String nome, double preco, int quantidade) {
+		super();
+		this.nome = nome;
+		this.preco = preco;
+		this.quantidade = quantidade;
+	}
     
-    public String getNome() {
-    	return this.nome;
-    }
-    
-    public double getPreco() {
-    	return this.preco;
-    }
-    
-    public void setPreco(double preco) {
-    	this.preco = preco;
-    }
-    
-    public double valorTotalNoEstoque(){
+
+	public Produtos(String nome, double preco) {
+		super();
+		this.nome = nome;
+		this.preco = preco;
+	} // utilizando sobrecarga nos construtores
+	
+	
+
+
+	public String getNome() {
+		return nome;
+	}
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+	public double getPreco() {
+		return preco;
+	}
+
+
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
+
+
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+
+	public double valorTotalNoEstoque(){
         return preco * quantidade;
     }
     
