@@ -6,16 +6,15 @@ public class Conta {
 	private int numConta;
 	private double saldoBanc;
 	
-	public Conta(String nome, int numConta, double saldoBanc) {
+	public Conta(String nome, int numConta, double depositoInicial) {
 		this.nome = nome;
 		this.numConta = numConta;
-		this.saldoBanc = saldoBanc;
+		this.deposito(depositoInicial);
 	}
 	
 	public Conta(String nome, int numConta) {
 		this.nome = nome;
 		this.numConta = numConta;
-		this.saldoBanc = 0.00;
 	}
 	
 	public String getNome() {
