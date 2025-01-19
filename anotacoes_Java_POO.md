@@ -300,3 +300,17 @@ Todas as classes do Java são subclasses da classe Object e herdam os seguintes 
 * toString: converte o objeto para String
 
 O método toString pode ser sobrescrito na classe criada para apresentar o conteudo necessário. Dentro de metodos de saida como `System.out.print()` se usarmos como parametro um objeto instanciado sem explicitar o método, automaticamente o Java chama o método toString. 
+
+---
+
+### Membros estáticos
+
+São atributos ou métodos declarados com o modificador `static` e que não precisão ser instanciados dentro de um objeto para serem chamados, e são chamado na aplicação a partir do nome da classe. Por este motivo são também chamados de membros de classe.
+
+Sao utilizadas normalmente em classes utilitarias, como a **classe Math**, e na declaração de constantes.
+
+Uma classe também pode receber o modificador `static`, porém esse tipo de classe não pode ser instanciada.
+
+**OBS:** Não é possível chamar um método que não possui o modificador estático dentro de um método estático, quando estão na mesma classe.
+
+Um método ou atributo pode receber o modificador `static` para os casos que o seu resultado independe de um objeto especifico, como é no caso de constantes e calculos matemáticos.
