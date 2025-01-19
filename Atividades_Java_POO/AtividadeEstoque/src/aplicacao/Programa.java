@@ -15,7 +15,12 @@ public class Programa {
 		double preco = sc.nextDouble();
 	
 		Produtos produto = new Produtos(nome,preco);
-
+		
+		produto.setNome("PC");
+		System.out.println("Nome atualizado: " + produto.getNome());
+		produto.setPreco(1200.00);
+		System.out.println("Preço atualizado: " + produto.getPreco());
+		
 		System.out.println();
 		System.out.println("Informações do produto: " + produto);
 
