@@ -314,3 +314,29 @@ Uma classe também pode receber o modificador `static`, porém esse tipo de clas
 **OBS:** Não é possível chamar um método que não possui o modificador estático dentro de um método estático, quando estão na mesma classe.
 
 Um método ou atributo pode receber o modificador `static` para os casos que o seu resultado independe de um objeto especifico, como é no caso de constantes e calculos matemáticos.
+
+### Tipos de Referência x Tipos de Valor
+
+**Variáveis de tipo referência:** são variáveis em que seu tipos são classes. Essas váriaveis não armazenam valores, mas sim um endereço de memória, que aponta para um local na memoria chamado *heap* que armazena as informações. Exemplo: Classe String.
+
+Principais características:
+
+- Usufrui recursos do POO
+- Objetos precisam ser instanciados ou apontar para um objeto existente
+- Aceita valor nulo
+- Objetos não sao desalocados pelo garbage colector
+
+**Váriaveis de tipo valor:** são variáveis de tipos primitivos. Elas são "caixas" que realmente armazenam valores no campo de memória chamado stack. Exemplo: int, char, double, boolean.
+
+Principais características: 
+
+- São mais simples e performáticas
+- Não precisam ser instanciadas, assim que declaradas podem ser usadas
+- Não aceita valor nulo
+- Variáveis são desalocadas imediatamente assim que o escopo é finalizado.
+
+**Valores Padrão:** Quando instanciamos uma classe ou array seu atributos recebem valores padrão que podem ser
+- números(int, double, etc): 0
+- boolean: false
+- char: caractere 0
+- objeto(String ou outra classe): null
