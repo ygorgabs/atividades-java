@@ -350,3 +350,5 @@ Principais características:
 ### Vetores
 
 É uma estrutura de dados do mesmo tipo, ordenada e alocada de uma só vez em um bloco sequencial de memória, ou seja, possuem tamanho fixo. Com vetores é possível ter acesso imediato aos elementos de acordo com sua posição, entreanto, é mais difícil realizar modificações entre as posições do vetor.
+
+**OBS:** Quando criamos um vetor de tipo referência cada posição vai armazenar um ponteiro para o objeto na memoria heap. Sendo assim, quando vamos definir o valor daquela posição do vetor é necessário instanciar para criar o objeto.
