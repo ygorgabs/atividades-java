@@ -2,37 +2,57 @@
 
 ## Tabela de shortcuts
 
-| **Atalho (Mac)**             | **Atalho (Windows)**        | **Descrição**                                                                                                                                   |
-|------------------------------|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| Command + 3                 | Ctrl + 3                   | Foca na caixa de pesquisa do Quick Access.                                                                                                       |
-| Command + S                 | Ctrl + S                   | Salva o editor atual.                                                                                                                            |
-| Command + 1                 | Ctrl + 1                   | Sugere correções rápidas (Quickfix) para erros e avisos, dependendo da posição do cursor.                                                        |
-| Control + Espaço             | Ctrl + Espaço               | Assistência de conteúdo e autocompletar código.                                                                                                  |
-| Command + Shift + F         | Ctrl + Shift + F           | Formata o código fonte.                                                                                                                          |
-| Control + Q                 | Ctrl + Q                   | Move o cursor para a última posição editada.                                                                                                     |
-| Command + D                 | Ctrl + D                   | Exclui a linha atual no editor.                                                                                                                  |
-| Command + Shift + O         | Ctrl + Shift + O           | Organiza os imports no arquivo Java atual.                                                                                                       |
-| Command + 2 + L             | Ctrl + 2 + L               | Atribui a instrução a uma nova variável local.                                                                                                   |
-| Command + 2 + F             | Ctrl + 2 + F               | Atribui a instrução a um campo.                                                                                                                  |
-| Command + O                 | Ctrl + O                   | Mostra um resumo rápido da estrutura da classe Java.                                                                                             |
-| Command + fn + F11          | Ctrl + F11                 | Executa a classe Java aberta, se existir um método `main`, ou executa a última aplicação lançada.                                                 |
-| Command + Shift + R         | Ctrl + Shift + R           | Abre/Pesquisa recursos (arquivos, pastas).                                                                                                       |
-| Command + Shift + T         | Ctrl + Shift + T           | Abre/Pesquisa tipos (classes, interfaces), útil para encontrar classes.                                                                          |
-| Command + E                 | Ctrl + E                   | Seleciona um editor entre os editores atualmente abertos.                                                                                        |
-| Command + fn + F8           | Ctrl + F8                  | Atalho para alternar entre perspectivas.                                                                                                         |
-| Command + [ ou Command + ]  | Alt + ← ou Alt + →         | Vai para a posição anterior/próxima no histórico do editor.                                                                                      |
-| Fn + F3                     | F3                         | Move o cursor para a declaração da variável.                                                                                                     |
-| Command + Shift + P         | Ctrl + Shift + P           | Move o cursor para o colchete correspondente.                                                                                                    |
-| Command + .                 | Ctrl + .                   | Vai para o próximo problema no código.                                                                                                           |
-| Command + Shift + .         | Ctrl + ,                   | Vai para o problema anterior no código.                                                                                                         |
-| Fn + F4                     | F4                         | Mostra a hierarquia de tipos da variável.                                                                                                        |
-| Command + K                 | Ctrl + K                   | Busca a próxima ocorrência do texto pesquisado no editor aberto.                                                                                 |
-| Command + Shift + G         | Ctrl + Shift + G           | Pesquisa referências no workEspaço.                                                                                                               |
-| Command + T                 | Ctrl + T                   | Mostra a hierarquia de tipos da classe Java atual.                                                                                               |
-| Command + M                 | Ctrl + M                   | Maximiza o editor Java.                                                                                                                          |
-| Fn + Shift + F2             | Shift + F2                 | Mostra o Javadoc do método ou classe.                                                                                                            |
-| Command + Option + R        | Alt + Shift + R            | Renomeia pacotes, classes, etc.                                                                                                                  |
-| Command + Option + T        | Alt + Shift + T            | Abre o menu de refatoração rápida.                                                                                                               |
+# Atalhos no Eclipse (Windows)
+
+| **Atalho (Windows)**        | **Descrição**                                                                                                                |
+|-----------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| Ctrl + 3                   | Foca na caixa de pesquisa do Quick Access.                                                                                  |
+| Ctrl + S                   | Salva o editor atual.                                                                                                       |
+| Ctrl + 1                   | Sugere correções rápidas (Quickfix) para erros e avisos, dependendo da posição do cursor.                                   |
+| Ctrl + Espaço               | Assistência de conteúdo e autocompletar código.                                                                            |
+| Ctrl + Shift + F           | Formata o código fonte.                                                                                                     |
+| Ctrl + Q                   | Move o cursor para a última posição editada.                                                                                |
+| Ctrl + D                   | Exclui a linha atual no editor.                                                                                             |
+| Ctrl + Shift + O           | Organiza os imports no arquivo Java atual.                                                                                  |
+| Ctrl + 2 + L               | Atribui a instrução a uma nova variável local.                                                                              |
+| Ctrl + 2 + F               | Atribui a instrução a um campo.                                                                                             |
+| Ctrl + O                   | Mostra um resumo rápido da estrutura da classe Java.                                                                        |
+| Ctrl + F11                 | Executa a classe Java aberta, se existir um método `main`, ou executa a última aplicação lançada.                            |
+| Ctrl + Shift + R           | Abre/Pesquisa recursos (arquivos, pastas).                                                                                  |
+| Ctrl + Shift + T           | Abre/Pesquisa tipos (classes, interfaces), útil para encontrar classes.                                                     |
+| Ctrl + E                   | Seleciona um editor entre os editores atualmente abertos.                                                                   |
+| Ctrl + F8                  | Atalho para alternar entre perspectivas.                                                                                    |
+| Alt + ← ou Alt + →         | Vai para a posição anterior/próxima no histórico do editor.                                                                 |
+| F3                         | Move o cursor para a declaração da variável.                                                                                |
+| Ctrl + Shift + P           | Move o cursor para o colchete correspondente.                                                                               |
+| Ctrl + .                   | Vai para o próximo problema no código.                                                                                      |
+| Ctrl + ,                   | Vai para o problema anterior no código.                                                                                     |
+| F4                         | Mostra a hierarquia de tipos da variável.                                                                                   |
+| Ctrl + K                   | Busca a próxima ocorrência do texto pesquisado no editor aberto.                                                            |
+| Ctrl + Shift + G           | Pesquisa referências no workspace.                                                                                          |
+| Ctrl + T                   | Mostra a hierarquia de tipos da classe Java atual.                                                                          |
+| Ctrl + M                   | Maximiza o editor Java.                                                                                                     |
+| Shift + F2                 | Mostra o Javadoc do método ou classe.                                                                                       |
+| Alt + Shift + R            | Renomeia pacotes, classes, etc.                                                                                             |
+| Alt + Shift + T            | Abre o menu de refatoração rápida.                                                                                          |
+| Ctrl + Shift + ↓           | Copia o código para a linha de baixo.                                                                                       |
+| Ctrl + N                   | Cria um novo projeto usando o assistente.                                                                                   |
+| Ctrl + Alt + N             | Cria um novo projeto, arquivo, classe, etc.                                                                                 |
+| Ctrl + Shift + W           | Fecha todos os arquivos abertos.                                                                                            |
+| Ctrl + Shift + S           | Salva todos os arquivos abertos.                                                                                            |
+| F5                         | Atualiza o conteúdo do elemento selecionado com o sistema de arquivos local.                                                |
+| Ctrl + F6                  | Alterna para o próximo editor.                                                                                              |
+| Ctrl + F7                  | Alterna entre visões (painéis).                                                                                             |
+| Ctrl + F10                 | Mostra o menu da visão atual.                                                                                               |
+| Ctrl + Shift + F6          | Alterna para o editor anterior.                                                                                             |
+| Alt + Shift + M            | Extrai uma seleção para um método.                                                                                          |
+| Alt + Shift + L            | Extrai uma seleção para uma variável local.                                                                                 |
+| Alt + Shift + V            | Move o elemento selecionado para outra classe ou arquivo.                                                                   |
+| Ctrl + Shift + F7          | Alterna para a visão anterior.                                                                                              |
+| Ctrl + /                   | Comenta ou descomenta uma linha ou seleção (adiciona `//`).                                                                 |
+| Ctrl + Shift + /           | Adiciona um comentário de bloco ao redor da seleção (adiciona `/* ... */`).                                                 |
+| Ctrl + Shift + \           | Remove um comentário de bloco.                                                                                              |
+| Ctrl + Shift ++ ou -       | Amplia ou reduz o zoom no texto do editor.                                                                                  |
 
 ---
 
