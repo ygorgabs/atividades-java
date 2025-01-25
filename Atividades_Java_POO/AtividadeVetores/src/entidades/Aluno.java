@@ -33,8 +33,5 @@ public class Aluno {
 	public void setNota2(double nota2) {
 		this.nota2 = nota2;
 	}
-	
-	
-	
-	
+		
 }
