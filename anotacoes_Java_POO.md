@@ -352,3 +352,26 @@ Principais características:
 É uma estrutura de dados do mesmo tipo, ordenada e alocada de uma só vez em um bloco sequencial de memória, ou seja, possuem tamanho fixo. Com vetores é possível ter acesso imediato aos elementos de acordo com sua posição, entreanto, é mais difícil realizar modificações entre as posições do vetor.
 
 **OBS:** Quando criamos um vetor de tipo referência cada posição vai armazenar um ponteiro para o objeto na memoria heap. Sendo assim, quando vamos definir o valor daquela posição do vetor é necessário instanciar para criar o objeto.
+
+### Boxing, Unboxing e Wrapper Classes
+
+**Boxing:** Processo de conversão de um objeto do tipo valor(primitivo) para um tipo de referência compatível. Exemplo:
+
+```
+int x = 20;
+Object obj = x;
+```
+
+**Unboxing:** Processo de conversão de um objeto de tipo referência para um objeto de tipo valor. Exemplo:
+
+```
+int x = 20;
+Object obj = x;
+int y = (int) obj;
+```
+
+**Wrapper Classes:** São classes equivalente aos tipos primitivos, e que permitem utilizar os benefícios da Orientação a Objetos. É normalmente usada em sistemas de informação, para compatibilizar o programa com os bancos de dados, visto que muitos campos dos BD aceitam valores nulos.
+
+As wrapper classes do Java são: Boolean, Character, Byte, Short, Integer, Long, Float e Double.
+
+**OBS**: As wrapper classes tem o mesmo nome dos tipos primitivos, mas para diferenciá-las, elas começam com a letra maiúscula.
