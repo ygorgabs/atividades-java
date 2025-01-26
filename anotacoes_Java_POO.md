@@ -375,3 +375,16 @@ int y = (int) obj;
 As wrapper classes do Java são: Boolean, Character, Byte, Short, Integer, Long, Float e Double.
 
 **OBS**: As wrapper classes tem o mesmo nome dos tipos primitivos, mas para diferenciá-las, elas começam com a letra maiúscula.
+
+### Listas
+
+É uma estrutura de dados homogênea(os dados tem que ser do mesmo tipo), ordenada, que inicia vazia e os dados são alocados dinamicamente dependendo da necessidade. Quando alocamos um elemento na lista, dizemos que ele ocupa um nó. No Java as listas são uma interface do tipo List. Essa interface possui implementação nas classes ArrayList, LinkedList, etc.
+
+Vantagens:
+* Tamanho variável
+* Facilidade para inserir ou deletar informações
+
+Desvantagens:
+* Acesso sequencial - para acessar um elemento é necessário percorrer a lista até ele. Obs: dependendo da implementação da interface o acesso pode ser facilitado.
+
+No java as listas não aceitam tipos primitivos, então é necessário usar as wrapper classes para definir o tipo de dados e para instanciar é necessário usar a classe que implementa a interface List. Exemplo: `List <String> list = new ArrayList<>();`
