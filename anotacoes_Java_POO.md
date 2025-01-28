@@ -392,3 +392,8 @@ No java as listas não aceitam tipos primitivos, então é necessário usar as w
 ### Matrizes
 
 É um arranjo biddimensional, de dados homogêneos e ordenada. Pode ser entendido como um vetor com linhas e colunas. Assim como os vetores, as matrizes também são alocados em um bloco continuo de memória. Possui as mesmas vantagens e desvantagens de um vetor.
+
+Exemplo: `int[][] mat = new int [n][n];`
+
+Para encontrar o numero de linhas da matriz usar `mat.length`.
+Para encontrar o numero de colunas da matriz usar: `mat[n].length`. Sendo "n" o número da linha.
