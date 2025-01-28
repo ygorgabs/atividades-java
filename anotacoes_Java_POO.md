@@ -388,3 +388,7 @@ Desvantagens:
 * Acesso sequencial - para acessar um elemento é necessário percorrer a lista até ele. Obs: dependendo da implementação da interface o acesso pode ser facilitado.
 
 No java as listas não aceitam tipos primitivos, então é necessário usar as wrapper classes para definir o tipo de dados e para instanciar é necessário usar a classe que implementa a interface List. Exemplo: `List <String> list = new ArrayList<>();`
+
+### Matrizes
+
+É um arranjo biddimensional, de dados homogêneos e ordenada. Pode ser entendido como um vetor com linhas e colunas. Assim como os vetores, as matrizes também são alocados em um bloco continuo de memória. Possui as mesmas vantagens e desvantagens de um vetor.
