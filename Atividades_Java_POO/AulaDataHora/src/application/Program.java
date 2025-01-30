@@ -3,7 +3,6 @@ package application;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 public class Program {
@@ -22,8 +21,7 @@ public class Program {
 		Instant d07 = Instant.parse("2025-01-25T22:20:26-03:00"); // convertendo texto com horario local em um objeto
 																	// data-hora padrao GMT
 
-		LocalDate d08 = LocalDate.parse("28/01/2025", fmt1); // passando fmt1 como parametro para aceitar o formato de
-																// data br
+		LocalDate d08 = LocalDate.parse("28/01/2025", fmt1); // passando fmt1 como parametro para aceitar o formato de data br
 		LocalDateTime d09 = LocalDateTime.parse("28/01/2025 23:00", fmt2);
 		LocalDate d10 = LocalDate.of(2025, 01, 28); // instanciando data-hora a a patir de dados isolados
 		LocalDateTime d11 = LocalDateTime.of(2025, 01, 28, 23, 02);

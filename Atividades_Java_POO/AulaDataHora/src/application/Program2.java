@@ -9,7 +9,6 @@ public class Program2 {
 
 	public static void main(String[] args) {
 		DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy"); 
-		DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 		DateTimeFormatter fmt3 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").withZone(ZoneId.systemDefault());
 		// Instanciando um objeto de data personalizado, passando qual é o fuso horario pelos metodos withZone e ZoneId.systemDefault
 		//Para formatar objetos Instant é necessário passar sempre o fuso horario

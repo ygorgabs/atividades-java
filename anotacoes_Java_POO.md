@@ -400,6 +400,8 @@ Para encontrar o numero de colunas da matriz usar: `mat[n].length`. Sendo "n" o 
 
 ### Data e Hora 
 
+Objetos data-hora no Java são imutáveis. para realizar modificações é necessário criar um novo objeto.
+
 Principais classes de Data e Hora (A partir do Java 8)
 
 Data-Hora local:
