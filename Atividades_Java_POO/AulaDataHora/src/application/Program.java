@@ -3,6 +3,7 @@ package application;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 public class Program {
@@ -11,6 +12,8 @@ public class Program {
 		
 		DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy"); //instanciando essa classe para poder usar outros formatos de data para criar objetos data-hora
 		DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+		DateTimeFormatter fmt3 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").withZone(ZoneId.systemDefault());
+		// Instanciando um objeto de data personalizado, passando qual é o fuso horario pelos metodos withZone e ZoneId.systemDefault
 		
 		LocalDate d01 = LocalDate.now(); // instanciando a data do pc
 		LocalDateTime d02 = LocalDateTime.now(); // instanciando data e hora local
@@ -25,17 +28,20 @@ public class Program {
 		LocalDate d10 = LocalDate.of(2025, 01, 28); // instanciando data-hora a a patir de dados isolados
 		LocalDateTime d11 = LocalDateTime.of(2025, 01, 28, 23, 02);
 		
-		System.out.println("d01: " + d01);
-		System.out.println("d01: " + d02);
-		System.out.println("d03: " + d03);
-		System.out.println("d04: " + d04);
-		System.out.println("d05: " + d05);
-		System.out.println("d06: " + d06);
-		System.out.println("d07: " + d07);
-		System.out.println("d08: " + d08);
-		System.out.println("d09: " + d09);
-		System.out.println("d10: " + d10);
-		System.out.println("d11: " + d11);
+		/*
+		 * System.out.println("d01: " + d01); System.out.println("d01: " + d02);
+		 * System.out.println("d03: " + d03); System.out.println("d04: " + d04);
+		 * System.out.println("d05: " + d05); System.out.println("d06: " + d06);
+		 * System.out.println("d07: " + d07); System.out.println("d08: " + d08);
+		 * System.out.println("d09: " + d09); System.out.println("d10: " + d10);
+		 * System.out.println("d11: " + d11);
+		 */
+		
+		System.out.println("d04: " + d04.format(fmt1)); // passando um objeto data-hora para formato personalizado de data
+		System.out.println("d04: " + fmt1.format(d04)); // passando um objeto de formato personalizado de data com parametro data-hora iso
+		System.out.println("d05: " + fmt3.format(d06)); //Classe Instant não tem o metodo format, entao tem que ser usado atraves do da classe DateTimeFormat
+		
+		
 
 	}
 
