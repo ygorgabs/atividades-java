@@ -1,6 +1,6 @@
 # Recursos Avaçados
 
-### Classe Object e toString()
+## Classe Object e toString()
 
 Todas as classes do Java são subclasses da classe Object e herdam os seguintes métodos:
 
@@ -13,9 +13,9 @@ O método toString pode ser sobrescrito na classe criada para apresentar o conte
 
 ---
 
-### Membros estáticos
+## Membros estáticos
 
-São atributos ou métodos declarados com o modificador `static` e que não precisão ser instanciados dentro de um objeto para serem chamados, e são chamado na aplicação a partir do nome da classe. Por este motivo são também chamados de membros de classe.
+São atributos ou métodos declarados com o modificador `static` e que não precisam ser instanciados dentro de um objeto para serem chamados, e são chamado na aplicação a partir do nome da classe. Por este motivo são também chamados de membros de classe.
 
 Sao utilizadas normalmente em classes utilitarias, como a **classe Math**, e na declaração de constantes.
 
@@ -25,7 +25,7 @@ Uma classe também pode receber o modificador `static`, porém esse tipo de clas
 
 Um método ou atributo pode receber o modificador `static` para os casos que o seu resultado independe de um objeto especifico, como é no caso de constantes e calculos matemáticos.
 
-### Tipos de Referência x Tipos de Valor
+## Tipos de Referência x Tipos de Valor
 
 **Variáveis de tipo referência:** são variáveis em que seu tipos são classes. Essas váriaveis não armazenam valores, mas sim um endereço de memória, que aponta para um local na memoria chamado *heap* que armazena as informações. Exemplo: Classe String.
 
@@ -51,13 +51,13 @@ Principais características:
 - char: caractere 0
 - objeto(String ou outra classe): null
 
-### Desalocação de Memória
+## Desalocação de Memória
 
 **Garbage colector:** Processo que gerencia o uso da memória. Ele monitora o uso do heap e desaloca objetos que não possuem mais referência, ou seja, não possui mais variáveis do tipo rerencia apontando para seu endereço.
 
 **Desalocação por escopo:** Processo que elimina as variáveis do tipo valor após o fim do escopo. Exemplo, váriavel declarada dentro de um if e que será eliminada após o fim do if.
 
-### Boxing, Unboxing e Wrapper Classes
+## Boxing, Unboxing e Wrapper Classes
 
 **Boxing:** Processo de conversão de um objeto do tipo valor(primitivo) para um tipo de referência compatível. Exemplo:
 
@@ -80,7 +80,7 @@ As wrapper classes do Java são: Boolean, Character, Byte, Short, Integer, Long,
 
 **OBS**: As wrapper classes tem o mesmo nome dos tipos primitivos, mas para diferenciá-las, elas começam com a letra maiúscula.
 
-### Data e Hora 
+## Data e Hora 
 
 Objetos data-hora no Java são imutáveis. para realizar modificações é necessário criar um novo objeto.
 
@@ -101,7 +101,7 @@ Outros:
 - ZoneId
 - ChronoUnit
 
-### Enum 
+## Enum 
 
 Os Enums são tipos especiais que agrupam valores fixos e pré-definidos. É uma lista de opções que garante que somente aqueles valores seja aceitos, evitando erros e deixando o código mais claro. Exemplo:
 
