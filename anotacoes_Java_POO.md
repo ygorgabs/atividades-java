@@ -445,3 +445,7 @@ Características:
 * Permite adicionar comportamentos(métodos) a essas constantes
 
 *OBS:* Cada enum valor do enum é uma instancia, por esse motivo quando definimos um contrutor, cada enum deve passar os respectivos parametros.
+
+Todo enumerador possui um método chamado values() que retorna um array com todos os valores contidos naquele enum.
+
+Outro método é o valueOf(), que recebe um parametro String e retorna a constante correspondente. Esse método é case sensitive, entao se o parametro nao for exatamente o nome da constante que deseja ele irá lançar uma excessão.
