@@ -449,3 +449,5 @@ Características:
 Todo enumerador possui um método chamado values() que retorna um array com todos os valores contidos naquele enum.
 
 Outro método é o valueOf(), que recebe um parametro String e retorna a constante correspondente. Esse método é case sensitive, entao se o parametro nao for exatamente o nome da constante que deseja ele irá lançar uma excessão.
+
+Outra coisa possível com enums é utilizar métodos abstratos para que sejam aplicados aplicações diferentes para o método dependendo da constante.
