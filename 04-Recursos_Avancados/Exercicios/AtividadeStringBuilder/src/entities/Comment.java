@@ -3,7 +3,7 @@ package entities;
 public class Comment {
     private String text;
 
-    public Comment(){
+    public Comment() {
 
     }
 
@@ -18,4 +18,6 @@ public class Comment {
     public void setText(String text) {
         this.text = text;
     }
+
+
 }
