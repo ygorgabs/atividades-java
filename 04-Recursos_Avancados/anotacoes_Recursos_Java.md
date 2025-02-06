@@ -27,7 +27,7 @@ Um método ou atributo pode receber o modificador `static` para os casos que o s
 
 ## Tipos de Referência x Tipos de Valor
 
-**Variáveis de tipo referência:** são variáveis em que seu tipos são classes. Essas váriaveis não armazenam valores, mas sim um endereço de memória, que aponta para um local na memoria chamado *heap* que armazena as informações. Exemplo: Classe String.
+### **Variáveis de tipo referência:** são variáveis em que seu tipo é uma classe. Essas váriaveis não armazenam valores, mas sim um endereço de memória, que aponta para um local na memoria chamado *heap* que armazena as informações de um objeto. Exemplo: Classe String.
 
 Principais características:
 
@@ -36,7 +36,15 @@ Principais características:
 - Aceita valor nulo
 - Objetos não sao desalocados pelo garbage colector
 
-**Váriaveis de tipo valor:** são variáveis de tipos primitivos. Elas são "caixas" que realmente armazenam valores no campo de memória chamado stack. Exemplo: int, char, double, boolean.
+**Valores Padrão:** Quando instanciamos uma classe ou array seu atributos recebem valores padrão que podem ser
+- números(int, double, etc): 0
+- boolean: false
+- char: caractere 0
+- objeto(String ou outra classe): null
+
+**Null Pointer Exception:** Esse é um erro que aparece no Java quando tentamos usar metodos ou atributos de variáveis de tipo referência que estão com valor nulo ou que ainda não foram instanciados. Isto acontece pois a variável não possui o "ponteiro" que indica qual objeto acessar, então o Java lança uma exceção que pode interromper o programa. Na maioria dos casos, esse tipo de erro se deve a um problema na lógica do programa, então examinar o código caso se deparar com `NullPointerException`.
+
+### **Váriaveis de tipo valor:** são variáveis de tipos primitivos. Elas são "caixas" que realmente armazenam valores no campo de memória chamado stack. Exemplo: int, char, double, boolean.
 
 Principais características: 
 
@@ -44,12 +52,6 @@ Principais características:
 - Não precisam ser instanciadas, assim que declaradas podem ser usadas
 - Não aceita valor nulo
 - Variáveis são desalocadas imediatamente assim que o escopo é finalizado.
-
-**Valores Padrão:** Quando instanciamos uma classe ou array seu atributos recebem valores padrão que podem ser
-- números(int, double, etc): 0
-- boolean: false
-- char: caractere 0
-- objeto(String ou outra classe): null
 
 ## Desalocação de Memória
 
