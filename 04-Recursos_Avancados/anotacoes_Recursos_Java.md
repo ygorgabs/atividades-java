@@ -11,8 +11,6 @@ Todas as classes do Java são subclasses da classe Object e herdam os seguintes 
 
 O método toString pode ser sobrescrito na classe criada para apresentar o conteudo necessário. Dentro de metodos de saida como `System.out.print()` se usarmos como parametro um objeto instanciado sem explicitar o método, automaticamente o Java chama o método toString. 
 
----
-
 ## Membros estáticos
 
 São atributos ou métodos declarados com o modificador `static` e que não precisam ser instanciados dentro de um objeto para serem chamados, e são chamado na aplicação a partir do nome da classe. Por este motivo são também chamados de membros de classe.
@@ -27,7 +25,9 @@ Um método ou atributo pode receber o modificador `static` para os casos que o s
 
 ## Tipos de Referência x Tipos de Valor
 
-### **Variáveis de tipo referência:** são variáveis em que seu tipo é uma classe. Essas váriaveis não armazenam valores, mas sim um endereço de memória, que aponta para um local na memoria chamado *heap* que armazena as informações de um objeto. Exemplo: Classe String.
+### **Variáveis de tipo referência:** 
+
+São variáveis em que seu tipo é uma classe. Essas váriaveis não armazenam valores, mas sim um endereço de memória, que aponta para um local na memoria chamado *heap* que armazena as informações de um objeto. Exemplo: Classe String.
 
 Principais características:
 
@@ -44,7 +44,9 @@ Principais características:
 
 **Null Pointer Exception:** Esse é um erro que aparece no Java quando tentamos usar metodos ou atributos de variáveis de tipo referência que estão com valor nulo ou que ainda não foram instanciados. Isto acontece pois a variável não possui o "ponteiro" que indica qual objeto acessar, então o Java lança uma exceção que pode interromper o programa. Na maioria dos casos, esse tipo de erro se deve a um problema na lógica do programa, então examinar o código caso se deparar com `NullPointerException`.
 
-### **Váriaveis de tipo valor:** são variáveis de tipos primitivos. Elas são "caixas" que realmente armazenam valores no campo de memória chamado stack. Exemplo: int, char, double, boolean.
+### **Váriaveis de tipo valor** 
+
+São variáveis de tipos primitivos. Elas são "caixas" que realmente armazenam valores no campo de memória chamado stack. Exemplo: int, char, double, boolean.
 
 Principais características: 
 
