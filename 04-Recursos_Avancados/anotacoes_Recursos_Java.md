@@ -42,7 +42,7 @@ Principais características:
 - char: caractere 0
 - objeto(String ou outra classe): null
 
-**Null Pointer Exception:** Esse é um erro que aparece no Java quando tentamos usar metodos ou atributos de variáveis de tipo referência que estão com valor nulo ou que ainda não foram instanciados. Isto acontece pois a variável não possui o "ponteiro" que indica qual objeto acessar, então o Java lança uma exceção que pode interromper o programa. Na maioria dos casos, esse tipo de erro se deve a um problema na lógica do programa, então examinar o código caso se deparar com `NullPointerException`.
+**Null Pointer Exception:** Esse é um erro que aparece no Java quando tentamos usar metodos ou atributos de variáveis de tipo referência que estão com valor nulo ou que ainda não foram instanciados. Isto acontece pois a variável não possui o "ponteiro" que indica qual objeto acessar, então o Java lança uma exceção que pode interromper o programa. Na maioria dos casos, esse tipo de erro se deve a um problema na lógica do programa, então examine o código caso se depare com `NullPointerException`.
 
 ### **Váriaveis de tipo valor** 
 
