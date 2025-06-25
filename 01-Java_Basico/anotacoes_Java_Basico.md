@@ -25,6 +25,10 @@ Tipos de cometários no Java
 */
 ```
 
+## Pacotes
+
+Pacotes são diretorios criados em projetos Java onde é possível organizas suas classes. Por convenção um pacote deve ser nomedo da seguinte forma: dominiosite.nomedoprojeto.nomedopacote
+
 ## Tipos primitivos
 
  Java é uma linguagem **fortemente tipada** por isso os tipos da variável importam ao declarar uma variável.
