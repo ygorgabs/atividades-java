@@ -137,3 +137,30 @@ Todo enumerador possui um método chamado values() que retorna um array com todo
 Outro método é o valueOf(), que recebe um parametro String e retorna a constante correspondente. Esse método é case sensitive, entao se o parametro nao for exatamente o nome da constante que deseja ele irá lançar uma excessão.
 
 Outra coisa possível com enums é utilizar métodos abstratos para que sejam aplicados aplicações diferentes para o método dependendo da constante.
+
+## VARARGS (Variable Arguments)
+
+Utilizamos o Varargs quando não sabemos quantos parâmetros serão passados para um método. Os argumentos devem ser do mesmo tipo e são tratados internamente como um array.
+
+Para indicar que o parêmetro é um varargs deve-se colocar três pontos após a declaração do tipo. Exemplo de método que utiliza varargs:
+
+```java
+public void somaVarArgs(int... numeros){
+        int soma = 0;
+
+        for(int num : numeros){
+            soma += num;
+        }
+
+        System.out.println(soma);
+    }
+```
+
+Na chamada do método deve-se listar os argumentos normalmente, como se tivéssemos criando um array. Exemplo:
+
+```java
+Calculadora calculadora = new Calculadora();
+calculadora.somaVarArgs(1,2,3,4,5);
+```
+
+**OBS:** Após declarar um varargs não é possivel adicionar mais nenhum parâmetro na assinatura do método. Então, caso seja necessário outros parâmetros, eles devem ser listados antes do varargs.
