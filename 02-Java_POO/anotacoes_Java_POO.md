@@ -175,9 +175,9 @@ Caneta c1 = new Caneta("BIC","Azul",0.5f);
 
 _**OBS**_: No Java não precisa colocar o tipo de retorno no método construtor e o nome do método tem que ser o mesmo nome da classe.
 
-_**OBS 2**_: Em algumas IDEs é possível gerar os métodos getter, setter e constructor automaticamente. Exemplo: **IntelliJ alt+insert**
+_**OBS 2**_: Em classes com sobrecarga de construtores, é possível invocar um construtor a partir de outro utilizando a palavra-chave `this()`. Essa chamada deve, obrigatoriamente, ser a primeira instrução dentro do construtor, caso contrário ocorrerá um erro de compilação. Esse recurso é útil para evitar repetição de código entre construtores.
 
-_**OBS 3**_: É uma boa prática usar os metodos get e set até mesmo dentro da classe original.
+_**OBS 3**_: Em algumas IDEs é possível gerar os métodos getter, setter e constructor automaticamente. Exemplo: **IntelliJ alt+insert**
 
 ## Encapsulamento
 
