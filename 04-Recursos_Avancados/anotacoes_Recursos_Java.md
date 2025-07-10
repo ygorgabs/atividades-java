@@ -167,7 +167,7 @@ calculadora.somaVarArgs(1,2,3,4,5);
 
 ## Bloco de Inicialização de Instância
 
-É um bloco de código que será sempre que um objeto daquela classe é criado. Podem ser usados para iniciar variáveis de classe ou realizar configurações no objeto quando instanciado. Um bloco de inicialização tem acesso a todos os métodos e atributos da classe.
+É um bloco de código que será sempre executado quando objeto daquela classe é criado. Podem ser usados para iniciar variáveis de classe ou realizar configurações no objeto quando instanciado. Um bloco de inicialização tem acesso a todos os métodos e atributos da classe.
 
 Os blocos de inicialização são definidos ao abrir e fechar chaves fora de qualquer método ou construtor. Exemplo:
 
@@ -216,4 +216,4 @@ Como podem ser usados:
 - Quando a lógica de inicialização depende de condições específicas verificadas no tempo de excução.
 - Quando é preciso configurar vários aspectos do objeto antes que qualquer outro código seja executado.
 
-__*OBS:*__ Podem haver mais de um bloco de inicialização por classe e eles serão executados na ordem em que estão dispostos dentro dela.
+__*OBS:*__ Pode haver mais de um bloco de inicialização por classe e eles serão executados na ordem em que estão dispostos dentro dela.
