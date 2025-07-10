@@ -164,3 +164,56 @@ calculadora.somaVarArgs(1,2,3,4,5);
 ```
 
 **OBS:** Após declarar um varargs não é possivel adicionar mais nenhum parâmetro na assinatura do método. Então, caso seja necessário outros parâmetros, eles devem ser listados antes do varargs.
+
+## Bloco de Inicialização de Instância
+
+É um bloco de código que será sempre que um objeto daquela classe é criado. Podem ser usados para iniciar variáveis de classe ou realizar configurações no objeto quando instanciado. Um bloco de inicialização tem acesso a todos os métodos e atributos da classe.
+
+Os blocos de inicialização são definidos ao abrir e fechar chaves fora de qualquer método ou construtor. Exemplo:
+
+```java
+public class Anime {
+    private String nome;
+    private int[] episodios;
+
+    {
+        System.out.println("Dentro do bloco de inicialização");
+        episodios = new int[100];
+        for (int i = 0; i < episodios.length; i++) {
+            episodios[i] = i + 1;
+        }
+    } // este é o bloco de inicialização
+
+    public Anime(String nome){
+        this.nome = nome;
+    }
+
+    public Anime() {
+
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int[] getEpisodios() {
+        return episodios;
+    }
+
+    public void setEpisodios(int[] episodios) {
+        this.episodios = episodios;
+    }
+}
+```
+
+Como podem ser usados:
+
+- Quando a lógica de inicialização não  se encaixa bem em construtores.
+- Quando a lógica de inicialização depende de condições específicas verificadas no tempo de excução.
+- Quando é preciso configurar vários aspectos do objeto antes que qualquer outro código seja executado.
+
+__*OBS:*__ Podem haver mais de um bloco de inicialização por classe e eles serão executados na ordem em que estão dispostos dentro dela.
