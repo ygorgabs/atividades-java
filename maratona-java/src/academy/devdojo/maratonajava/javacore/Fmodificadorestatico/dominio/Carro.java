@@ -34,11 +34,11 @@ public class Carro {
         this.velocidadeMaxima = velocidadeMaxima;
     }
 
-    public double getVelocidadeLimite() {
-        return velocidadeLimite;
+    public static double getVelocidadeLimite() {
+        return Carro.velocidadeLimite;
     }
 
-    public void setVelocidadeLimite(double velocidadeLimite) {
+    public static void setVelocidadeLimite(double velocidadeLimite) {
         Carro.velocidadeLimite = velocidadeLimite;
     }
 }
