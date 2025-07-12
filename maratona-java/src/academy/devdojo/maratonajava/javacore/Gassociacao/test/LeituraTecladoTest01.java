@@ -14,7 +14,7 @@ public class LeituraTecladoTest01 {
         char genero = Character.toUpperCase(sc.next().charAt(0));
         System.out.println("---------------------");
         System.out.println("Nome " + nome + "\nIdade: " + idade + "\nGenero: " + genero);
-        
+
         sc.close();
     }
 }
