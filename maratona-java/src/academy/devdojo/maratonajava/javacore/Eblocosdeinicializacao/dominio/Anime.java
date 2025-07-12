@@ -7,7 +7,7 @@ public class Anime {
     /*
     Ordem de exceução:
 
-    1 - Açocado espaço em memória para o objeto
+    1 - Alocado espaço em memória para o objeto
     2 - Cada atributo de classe é criado e inicializado com valores default ou valores inseridos na criação
     3 - Bloco de inicialização é executado
     4 - Construtor é executado

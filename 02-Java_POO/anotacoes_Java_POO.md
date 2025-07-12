@@ -287,3 +287,36 @@ No Polimorfismo de Sobrecarga utilizamos vários métodos com o mesmo nome, por�
 **RESUMO**
 
 ![Tipos de Polimorfismo](image.png)
+
+## Enum 
+
+Os Enums são tipos especiais que agrupam valores fixos e pré-definidos. É uma lista de opções que garante que somente aqueles valores seja aceitos, evitando erros e deixando o código mais claro. Exemplo:
+
+```
+public enum DiaDaSemana {
+    SEGUNDA, TERCA, QUARTA, QUINTA, SEXTA, SABADO, DOMINGO;
+}
+
+// uso
+
+DiaDaSemana hoje = DiaDaSemana.SEXTA;
+System.out.Print(hoje);
+```
+
+Características:
+
+* Todo Enum extende a classe java.lang.Enum
+* Não existe herança entre enums, ou seja, não podem herdar atributos e métodos de outras enums
+* Podem implementar interfaces
+* Não podem ser instanciadas com new
+* Podem ser comparadas usando ==
+* Pode ser declarado separadamente ou dentro da classe
+* Permite adicionar comportamentos(métodos) a essas constantes
+
+*OBS:* Cada enum valor do enum é uma instancia, por esse motivo quando definimos um contrutor, cada enum deve passar os respectivos parametros.
+
+Todo enumerador possui um método chamado values() que retorna um array com todos os valores contidos naquele enum.
+
+Outro método é o valueOf(), que recebe um parametro String e retorna a constante correspondente. Esse método é case sensitive, entao se o parametro nao for exatamente o nome da constante que deseja ele irá lançar uma excessão.
+
+Outra coisa possível com enums é utilizar métodos abstratos para que sejam aplicados aplicações diferentes para o método dependendo da constante.

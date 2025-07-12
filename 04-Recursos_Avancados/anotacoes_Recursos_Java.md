@@ -105,39 +105,6 @@ Outros:
 - ZoneId
 - ChronoUnit
 
-## Enum 
-
-Os Enums são tipos especiais que agrupam valores fixos e pré-definidos. É uma lista de opções que garante que somente aqueles valores seja aceitos, evitando erros e deixando o código mais claro. Exemplo:
-
-```
-public enum DiaDaSemana {
-    SEGUNDA, TERCA, QUARTA, QUINTA, SEXTA, SABADO, DOMINGO;
-}
-
-// uso
-
-DiaDaSemana hoje = DiaDaSemana.SEXTA;
-System.out.Print(hoje);
-```
-
-Características:
-
-* Todo Enum extende a classe java.lang.Enum
-* Não existe herança entre enums, ou seja, não podem herdar atributos e métodos de outras enums
-* Podem implementar interfaces
-* Não podem ser instanciadas com new
-* Podem ser comparadas usando ==
-* Pode ser declarado separadamente ou dentro da classe
-* Permite adicionar comportamentos(métodos) a essas constantes
-
-*OBS:* Cada enum valor do enum é uma instancia, por esse motivo quando definimos um contrutor, cada enum deve passar os respectivos parametros.
-
-Todo enumerador possui um método chamado values() que retorna um array com todos os valores contidos naquele enum.
-
-Outro método é o valueOf(), que recebe um parametro String e retorna a constante correspondente. Esse método é case sensitive, entao se o parametro nao for exatamente o nome da constante que deseja ele irá lançar uma excessão.
-
-Outra coisa possível com enums é utilizar métodos abstratos para que sejam aplicados aplicações diferentes para o método dependendo da constante.
-
 ## VARARGS (Variable Arguments)
 
 Utilizamos o Varargs quando não sabemos quantos parâmetros serão passados para um método. Os argumentos devem ser do mesmo tipo e são tratados internamente como um array.
@@ -217,3 +184,17 @@ Como podem ser usados:
 - Quando é preciso configurar vários aspectos do objeto antes que qualquer outro código seja executado.
 
 __*OBS:*__ Pode haver mais de um bloco de inicialização por classe e eles serão executados na ordem em que estão dispostos dentro dela.
+
+## Ordem de execução de um objeto
+
+Ao instanciar uma classe, a JVM segue uma ordem específica de execução, considerando os elementos definidos nas classes envolvidas (superclasse e subclasse). A sequência geral é a seguinte: 
+
+    1 - O bloco de inicialização estático da superclasse é executado uma única vez, quando a JVM carrega a classe pai
+    2 - O bloco de inicialização estático da subclasse é executado uma única vez, quando a JVM carrega a classe filha
+    3 - É alocado espaço em memória para o objeto da subclasse (o espaço para a superclasse é incluído automaticamente como parte do objeto)
+    4 - Cada atributo de superclasse é criado e inicializado com valores default ou valores definidos na declaração
+    5 - Os blocos de inicialização de instância da superclasse são executados, na ordem em que aparecem
+    6 - O construtor da superclasse é chamado
+    7 - Cada atributo de subclasse é criado e inicializado com valores default ou valores definidos na declaração
+    8 - Os blocos de inicialização de instância da subclasse são executados, na ordem em que aparecem
+    9 - O construtor da subclasse é chamado
