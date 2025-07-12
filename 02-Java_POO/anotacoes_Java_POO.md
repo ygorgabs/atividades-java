@@ -69,11 +69,11 @@ Definição bibliografica:
 
 ## Visibilidade de um Objeto
 
-A visibilidade indica o nível de acesso aos componentes de uma classe. Existem 3
+A visibilidade indica o nível de acesso aos componentes de uma classe. Existem três níveis: 
 
-* Público (+) - O objeto *public* pode ser usado por qualquer um onde ele esteja disponível. Todas as classes tem acesso.
-* Privado (-) - O objeto *private* somente uma "pessoa" tem acesso a esse objeto. Somente a classe atual tem acesso.
-* Protegido (#) - O objeto *protected* somente quem tem a permissão pode usar. A Somente a classe atual e suas subclasses tem acesso.
+* Público (+) - Um item definido como *public* pode ser acessado por qualquer classe, independentemente do pacote em que estiver.
+* Privado (-) - Um item definido como *private* só pode ser acessado dentro da própria classe em que foi declarado.
+* Protegido (#) - Um item definido como *protected* pode ser acessado pela própria classe, por suas subclasses (mesmo que estejam em outros pacotes) e por classes do mesmo pacote.
 
 Exemplo:
 
