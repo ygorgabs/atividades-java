@@ -19,10 +19,10 @@ public class LeituraTecladoTest02 {
             String resposta = valor == 0 ? "Não" : "Sim";
 
             System.out.println(resposta);
-            System.out.println("-----------------------");
             System.out.println("Deseja fazer uma nova pergunta? (S/N)");
             continua = Character.toUpperCase(scanner.next().charAt(0));
             scanner.nextLine(); // fiz isso para engolir o espaço em branco que ficará após o next();
+            System.out.println("-----------------------");
         }while(continua == 'S');
         scanner.close();
     }
