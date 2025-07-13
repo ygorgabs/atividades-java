@@ -189,12 +189,78 @@ __*OBS:*__ Pode haver mais de um bloco de inicialização por classe e eles ser�
 
 Ao instanciar uma classe, a JVM segue uma ordem específica de execução, considerando os elementos definidos nas classes envolvidas (superclasse e subclasse). A sequência geral é a seguinte: 
 
-    1 - O bloco de inicialização estático da superclasse é executado uma única vez, quando a JVM carrega a classe pai
-    2 - O bloco de inicialização estático da subclasse é executado uma única vez, quando a JVM carrega a classe filha
-    3 - É alocado espaço em memória para o objeto da subclasse (o espaço para a superclasse é incluído automaticamente como parte do objeto)
-    4 - Cada atributo de superclasse é criado e inicializado com valores default ou valores definidos na declaração
-    5 - Os blocos de inicialização de instância da superclasse são executados, na ordem em que aparecem
-    6 - O construtor da superclasse é chamado
-    7 - Cada atributo de subclasse é criado e inicializado com valores default ou valores definidos na declaração
-    8 - Os blocos de inicialização de instância da subclasse são executados, na ordem em que aparecem
-    9 - O construtor da subclasse é chamado
+1 - O bloco de inicialização estático da superclasse é executado uma única vez, quando a JVM carrega a classe pai
+2 - O bloco de inicialização estático da subclasse é executado uma única vez, quando a JVM carrega a classe filha
+3 - É alocado espaço em memória para o objeto da subclasse (o espaço para a superclasse é incluído automaticamente como parte do objeto)
+4 - Cada atributo de superclasse é criado e inicializado com valores default ou valores definidos na declaração
+5 - Os blocos de inicialização de instância da superclasse são executados, na ordem em que aparecem
+6 - O construtor da superclasse é chamado
+7 - Cada atributo de subclasse é criado e inicializado com valores default ou valores definidos na declaração
+8 - Os blocos de inicialização de instância da subclasse são executados, na ordem em que aparecem
+9 - O construtor da subclasse é chamado
+
+## Modificador `final`
+
+O modificador `final` é utilizado para criar constantes em Java. Assim como outros modificadores presentes na linguagem ele é declarado antes do tipo do atributo. Exemplo: `public final int VALOR = 250`.
+
+Por convenção as constantes em Java são nomeadas sempre em UpperCase e se o nome for composto deve ser separado usando underline.
+
+### Modificador final com atributos tipo valor(primitivos)
+
+É muito comum usar constantes para armazenar valores de tipos primitivos em conjunto com o modificador `static`. Dessa forma, se torna mais simples utilizar valores constantes em outras partes do código sem necessariamente precisar instanciar um novo objeto.
+Quando o atributo final é de um tipo primitivo, seu valor se torna imutável após ser atribuído. Qualquer tentativa de reatribuição causará erro de compilação.
+
+Exemplo:
+
+```java
+public class Carro {
+    private String nome;
+    public static final double VELOCIDADE_LIMITE = 250;
+}
+
+public class CarroTest01 {
+    public static void main(String[] args) {
+        Carro carro = new Carro();
+        System.out.println(Carro.VELOCIDADE_LIMITE);
+    }
+}
+```
+
+### Modificador final com atributos tipo referência
+
+O modificador final permite também criar constantes de tipos referência. No entanto, devido as características desses tipos, o valor que será constante é a referência de memória daquele objeto. Em outras palavras, um atributo será criado e nele será armazenado a referência de memória ao objeto, mas por ter o modificador final essa referência não poderá ser alterada para indicar outro objeto.
+
+Cabe ressaltar que apesar da referência se tornar fixa, o objeto pode ser manipulado normalmente. Ou seja, é possível modificar os atributos do objeto apontado pela referência, mas não é possível fazer a referência apontar para um novo objeto.
+
+Exemplo:
+
+```java
+public class Carro {
+    private String nome;
+    public final Comprador COMPRADOR = new Comprador();
+}
+
+public class CarroTest01 {
+    public static void main(String[] args) {
+        Carro carro = new Carro();
+        carro.COMPRADOR.setNome("Kuririn");
+        System.out.println(carro.COMPRADOR);
+    }
+}
+```
+
+### Modificador final em Classes e Métodos
+
+- O modificador final é utilizado em classes quando não é desejável que aquela classe seja herdada por outra. Exemplo: classe String do pacote java.lang que é uma classe final e não é possível estender ela para outra classe.
+- O modificador final é utilizado em métodos quando não é desejável que esse método seja sobrescrito ao ser herdado.
+
+### Modificador final em parâmetros e variáveis locais
+
+Também é possível usar `final` em variáveis locais e parâmetros de métodos. Isso garante que o valor atribuído inicialmente não será modificado dentro do escopo do método.
+
+```java
+public void imprimirNomeFinal(final String nome) {
+    System.out.println(nome);
+    nome = "Outro nome"; // erro de compilação
+}
+```
