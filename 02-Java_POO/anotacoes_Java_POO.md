@@ -292,7 +292,7 @@ No Polimorfismo de Sobrecarga utilizamos vários métodos com o mesmo nome, por�
 
 Os Enums são tipos especiais que agrupam valores fixos e pré-definidos. É uma lista de opções que garante que somente aqueles valores seja aceitos, evitando erros e deixando o código mais claro. Exemplo:
 
-```
+```java
 public enum DiaDaSemana {
     SEGUNDA, TERCA, QUARTA, QUINTA, SEXTA, SABADO, DOMINGO;
 }
@@ -303,20 +303,62 @@ DiaDaSemana hoje = DiaDaSemana.SEXTA;
 System.out.Print(hoje);
 ```
 
+Cada item da enumeração é uma instancia de objeto, então podem possuir construtores, atributos e métodos. Por este motivo, ao definirmos um construtor, cada enum deve passar os respectivos parâmetros.
+
+
+ Exemplo:
+
+```java
+public enum TipoCliente {
+    PESSOA_FISICA(1, "Pessoa Física"),
+    PESSOA_JURIDICA(2, "Pessoa Jurídica");
+
+    private int valor;
+    private String nomeRelatorio;
+
+    TipoCliente(int valor, String nomeRelatorio) {
+        this.valor = valor;
+        this.nomeRelatorio = nomeRelatorio;
+    }
+
+    public String getNomeRelatorio() {
+        return nomeRelatorio;
+    }
+
+    public int getValor() {
+        return valor;
+    }
+}
+```
+
 Características:
 
 * Todo Enum extende a classe java.lang.Enum
-* Não existe herança entre enums, ou seja, não podem herdar atributos e métodos de outras enums
+* Não existe herança entre enums, ou seja, não podem estender outras enums e herdar seus atributos e métodos
 * Podem implementar interfaces
 * Não podem ser instanciadas com new
 * Podem ser comparadas usando ==
-* Pode ser declarado separadamente ou dentro da classe
-* Permite adicionar comportamentos(métodos) a essas constantes
+* Pode ser declarado dentro da classe ou em um arquivo separado 
 
-*OBS:* Cada enum valor do enum é uma instancia, por esse motivo quando definimos um contrutor, cada enum deve passar os respectivos parametros.
+Outra funcionalidade dos enum é a possibilidade de definir métodos abstratos ou sobrescrever métodos concretos, permitindo que cada constante do enum implemente um comportamento diferente para o mesmo método.
 
-Todo enumerador possui um método chamado values() que retorna um array com todos os valores contidos naquele enum.
+```java
+public enum TipoPagamento {
+    CREDITO {
+        @Override
+        public double calcularDesconto(double valor) {
+            return valor * 0.1;
+        }
+    }, DEBITO {
+        @Override
+        public double calcularDesconto(double valor) {
+            return valor * 0.05;
+        }
+    };
+    public abstract double calcularDesconto(double valor);
+}
+```
 
-Outro método é o valueOf(), que recebe um parametro String e retorna a constante correspondente. Esse método é case sensitive, entao se o parametro nao for exatamente o nome da constante que deseja ele irá lançar uma excessão.
+__*OBS1:*__ Todo enumerador possui um método chamado `values()` que retorna um array com todos os valores contidos naquele enum.
 
-Outra coisa possível com enums é utilizar métodos abstratos para que sejam aplicados aplicações diferentes para o método dependendo da constante.
+__*OBS2:*__ Os enums também possuem o método `valueOf()`, que recebe um parametro String e retorna a constante correspondente. Esse método é case sensitive, entao se o parametro nao for exatamente o nome da constante que deseja ele irá lançar uma excessão.
