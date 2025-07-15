@@ -187,24 +187,15 @@ Um software encapsulado segue padrões que irá proteger o usuario(dev) do códi
 
 Um objeto encapsulado ele trabalha através de mensagens que irá receber e enviar informações para o usuario. Para o usuario saber o que aquele objeto faz será utilizado as interfaces que estabelecem esses limites do que aquele objeto é capaz de fazer.
 
-Conceito de interface: Lista de serviços fornecidas por um componente. É o contato externo, que define o que pode ser feito com um objeto dessa classe.
-
 _**OBS**_: Encapsular não é obrigatório, mas é uma boa prática de POO.
+
+Quando se realiza o encapsulamento, todos os atributos de uma classe serão privados. Na classe deve ser indicado que ela implementará os metodos da interface(esses métodos serão colocados dentro da classe). Além desses métodos, devem ser implentados os getters e setters, visto que os atributos estão privados.
 
 Vantagens:
 
 * Tornar mudanças invisíveis
 * Facilitar reutilizar código
 * Reduzir efeitos colaterais
-
-As interfaces não possuem atributos, somente métodos. Esses são métodos abstratos, pois não executam ação dentro do método, apenas indica a ação que será realizada. Todos os métodos da interface são publicos.
-
-Quando se realiza o encapsulamento, todos os atributos de uma classe serão privados. Na classe deve ser indicado que ela implementará os metodos da interface(esses métodos serão colocados dentro da classe). Além desses métodos, devem ser implentados os getters e setters, visto que os atributos estão privados.
-
-A interface é implementada em um arquivo diferente da classe.
-
-* No Java utilizamos o modificador `abstract` nos métodos criados dentro das interfaces
-* Para implentar uma interface numa classe usamos o `implements`. Exemplo: `public class ControleRemoto implements Controlador`
 
 ## Relacionamento entre classes
 
@@ -261,32 +252,23 @@ Com a herança é possível criar uma classe sem precisar escrever tudo do zero,
 
 As classes e métodos podem ser abstratas ou finais. Conceito:
 
-* Classe abstrata: não pode ser instanciada. Só pode servir como progenitora(superclasse).
-* Método abstrato: que é declarado, mas não implementado na progenitora. Só pode ser colocado dentro de uma interface ou classe abstrata.
-* Classe final: Não pode ser herdada por outra classe. Obrigatoriamente folha.
-* Método final: Não pode ser sobrescrito pelas subclasses. Obrigatoriamente herdado.
+* Classe abstrata: não pode ser instanciada. Só pode servir como superclasse. Outra característica é que classes abstratas podem possuir tanto métodos abstratos quanto métodos concretos.
+* Método abstrato: que é declarado, mas não implementado na progenitora. Só pode ser utilizado dentro de uma interface ou classe abstrata.
+* Classe final: Não pode ser herdada por outra classe. 
+* Método final: Não pode ser sobrescrito pelas subclasses. Deve ser obrigatoriamente herdado.
 
-## Polimorfismo
+**OBS:** Quando uma classe abstrata estende outra classe abstrata que possui métodos abstratos, ela não é obrigada a implementar esses métodos imediatamente. No entanto, se ela não os implementar, qualquer subclasse concreta (ou seja, uma classe que não é abstrata) será obrigada a fornecer implementações para todos os métodos abstratos herdados.
 
-**Polimorfo**: Muitas formas - Permite que um mesmo nome represente vários comportamentos diferentes.
+## Interfaces
 
-* Assinatura do método: Quantidade e os tipos dos parâmetros do método. Métodos com essas caracterísitcas iguais tem a mesma assinatura.
+Lista de serviços fornecidas por um componente. É o contato externo, que define o que pode ser feito com um objeto dessa classe.
 
-### Polimorfismo de Sobreposição
+As interfaces não possuem atributos, somente métodos. Esses são métodos abstratos, pois não executam ação dentro do método, apenas indica a ação que será realizada. Todos os métodos da interface são publicos.
 
-Conceito: acontece quando substituímos um método de uma super classe na sua subclasse, usando a mesma assinatura.
+A interface é implementada em um arquivo diferente da classe.
 
-- Nesse casso, no Java usamos o `@Override` para sobrescrever o método já proposto na classe mãe e alteramos o comportamento dele.
-- A sobreposição acontece somente uma vez para o método dentro da classe e para realiza-la é obrigatório manter a mesma assinatura do método. 
-
-### Polimorfismo de Sobrecarga
-
-No Polimorfismo de Sobrecarga utilizamos vários métodos com o mesmo nome, porém com assinaturas diferentes (diferindo em número, tipo ou ordem dos parâmetros). Eles devem estar dentro da mesma classe. Esse tipo de polimorfismo permite usar diferentes soluções para uma mesma ação, de acordo com o contexto em que o método é utilizado, ou seja a assinatura.
-
-
-**RESUMO**
-
-![Tipos de Polimorfismo](image.png)
+* No Java utilizamos o modificador `abstract` nos métodos criados dentro das interfaces
+* Para implentar uma interface numa classe usamos o `implements`. Exemplo: `public class ControleRemoto implements Controlador`
 
 ## Enum 
 
@@ -362,3 +344,25 @@ public enum TipoPagamento {
 __*OBS1:*__ Todo enumerador possui um método chamado `values()` que retorna um array com todos os valores contidos naquele enum.
 
 __*OBS2:*__ Os enums também possuem o método `valueOf()`, que recebe um parametro String e retorna a constante correspondente. Esse método é case sensitive, entao se o parametro nao for exatamente o nome da constante que deseja ele irá lançar uma excessão.
+
+## Polimorfismo
+
+**Polimorfo**: Muitas formas - Permite que um mesmo nome represente vários comportamentos diferentes.
+
+* Assinatura do método: Quantidade e os tipos dos parâmetros do método. Métodos com essas caracterísitcas iguais tem a mesma assinatura.
+
+### Polimorfismo de Sobreposição
+
+Conceito: acontece quando substituímos um método de uma super classe na sua subclasse, usando a mesma assinatura.
+
+- Nesse casso, no Java usamos o `@Override` para sobrescrever o método já proposto na classe mãe e alteramos o comportamento dele.
+- A sobreposição acontece somente uma vez para o método dentro da classe e para realiza-la é obrigatório manter a mesma assinatura do método. 
+
+### Polimorfismo de Sobrecarga
+
+No Polimorfismo de Sobrecarga utilizamos vários métodos com o mesmo nome, porém com assinaturas diferentes (diferindo em número, tipo ou ordem dos parâmetros). Eles devem estar dentro da mesma classe. Esse tipo de polimorfismo permite usar diferentes soluções para uma mesma ação, de acordo com o contexto em que o método é utilizado, ou seja a assinatura.
+
+
+**RESUMO**
+
+![Tipos de Polimorfismo](image.png)
