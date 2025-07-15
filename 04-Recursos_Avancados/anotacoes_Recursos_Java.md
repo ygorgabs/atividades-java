@@ -255,12 +255,20 @@ __*OBS:*__ Pode haver mais de um bloco de inicialização por classe e eles ser�
 
 Ao instanciar uma classe, a JVM segue uma ordem específica de execução, considerando os elementos definidos nas classes envolvidas (superclasse e subclasse). A sequência geral é a seguinte: 
 
-1 - O bloco de inicialização estático da superclasse é executado uma única vez, quando a JVM carrega a classe pai
-2 - O bloco de inicialização estático da subclasse é executado uma única vez, quando a JVM carrega a classe filha
-3 - É alocado espaço em memória para o objeto da subclasse (o espaço para a superclasse é incluído automaticamente como parte do objeto)
-4 - Cada atributo de superclasse é criado e inicializado com valores default ou valores definidos na declaração
-5 - Os blocos de inicialização de instância da superclasse são executados, na ordem em que aparecem
-6 - O construtor da superclasse é chamado
-7 - Cada atributo de subclasse é criado e inicializado com valores default ou valores definidos na declaração
-8 - Os blocos de inicialização de instância da subclasse são executados, na ordem em que aparecem
-9 - O construtor da subclasse é chamado
+1. O bloco de inicialização estático da superclasse é executado uma única vez, quando a JVM carrega a classe pai;
+
+2. O bloco de inicialização estático da subclasse é executado uma única vez, quando a JVM carrega a classe filha;
+
+3. É alocado espaço em memória para o objeto da subclasse (o espaço para a superclasse é incluído automaticamente como parte do objeto);
+
+4. Cada atributo de superclasse é criado e inicializado com valores default ou valores definidos na declaração;
+
+5. Os blocos de inicialização de instância da superclasse são executados, na ordem em que aparecem;
+
+6. O construtor da superclasse é chamado;
+
+7. Cada atributo de subclasse é criado e inicializado com valores default ou valores definidos na declaração;
+
+8. Os blocos de inicialização de instância da subclasse são executados, na ordem em que aparecem;
+
+9. O construtor da subclasse é chamado.
