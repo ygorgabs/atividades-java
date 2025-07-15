@@ -11,18 +11,6 @@ Todas as classes do Java são subclasses da classe Object e herdam os seguintes 
 
 O método toString pode ser sobrescrito na classe criada para apresentar o conteudo necessário. Dentro de metodos de saida como `System.out.print()` se usarmos como parametro um objeto instanciado sem explicitar o método, automaticamente o Java chama o método toString. 
 
-## Membros estáticos
-
-São atributos ou métodos declarados com o modificador `static` e que não precisam ser instanciados dentro de um objeto para serem chamados, e são chamado na aplicação a partir do nome da classe. Por este motivo são também chamados de membros de classe.
-
-Sao utilizadas normalmente em classes utilitarias, como a **classe Math**, e na declaração de constantes.
-
-Uma classe também pode receber o modificador `static`, porém esse tipo de classe não pode ser instanciada.
-
-**OBS:** Não é possível chamar um método que não possui o modificador estático dentro de um método estático, quando estão na mesma classe.
-
-Um método ou atributo pode receber o modificador `static` para os casos que o seu resultado independe de um objeto especifico, como é no caso de constantes e calculos matemáticos.
-
 ## Tipos de Referência x Tipos de Valor
 
 ### **Variáveis de tipo referência:** 
@@ -132,72 +120,17 @@ calculadora.somaVarArgs(1,2,3,4,5);
 
 **OBS:** Após declarar um varargs não é possivel adicionar mais nenhum parâmetro na assinatura do método. Então, caso seja necessário outros parâmetros, eles devem ser listados antes do varargs.
 
-## Bloco de Inicialização de Instância
+## Modificador `static`
 
-É um bloco de código que será sempre executado quando objeto daquela classe é criado. Podem ser usados para iniciar variáveis de classe ou realizar configurações no objeto quando instanciado. Um bloco de inicialização tem acesso a todos os métodos e atributos da classe.
+São atributos ou métodos declarados com o modificador `static` e que não precisam ser instanciados dentro de um objeto para serem chamados, e são chamado na aplicação a partir do nome da classe. Por este motivo são também chamados de membros de classe.
 
-Os blocos de inicialização são definidos ao abrir e fechar chaves fora de qualquer método ou construtor. Exemplo:
+Sao utilizadas normalmente em classes utilitarias, como a **classe Math**, e na declaração de constantes.
 
-```java
-public class Anime {
-    private String nome;
-    private int[] episodios;
+Uma classe também pode receber o modificador `static`, porém esse tipo de classe não pode ser instanciada.
 
-    {
-        System.out.println("Dentro do bloco de inicialização");
-        episodios = new int[100];
-        for (int i = 0; i < episodios.length; i++) {
-            episodios[i] = i + 1;
-        }
-    } // este é o bloco de inicialização
+**OBS:** Não é possível chamar um método que não possui o modificador estático dentro de um método estático, quando estão na mesma classe.
 
-    public Anime(String nome){
-        this.nome = nome;
-    }
-
-    public Anime() {
-
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public int[] getEpisodios() {
-        return episodios;
-    }
-
-    public void setEpisodios(int[] episodios) {
-        this.episodios = episodios;
-    }
-}
-```
-
-Como podem ser usados:
-
-- Quando a lógica de inicialização não  se encaixa bem em construtores.
-- Quando a lógica de inicialização depende de condições específicas verificadas no tempo de excução.
-- Quando é preciso configurar vários aspectos do objeto antes que qualquer outro código seja executado.
-
-__*OBS:*__ Pode haver mais de um bloco de inicialização por classe e eles serão executados na ordem em que estão dispostos dentro dela.
-
-## Ordem de execução de um objeto
-
-Ao instanciar uma classe, a JVM segue uma ordem específica de execução, considerando os elementos definidos nas classes envolvidas (superclasse e subclasse). A sequência geral é a seguinte: 
-
-1 - O bloco de inicialização estático da superclasse é executado uma única vez, quando a JVM carrega a classe pai
-2 - O bloco de inicialização estático da subclasse é executado uma única vez, quando a JVM carrega a classe filha
-3 - É alocado espaço em memória para o objeto da subclasse (o espaço para a superclasse é incluído automaticamente como parte do objeto)
-4 - Cada atributo de superclasse é criado e inicializado com valores default ou valores definidos na declaração
-5 - Os blocos de inicialização de instância da superclasse são executados, na ordem em que aparecem
-6 - O construtor da superclasse é chamado
-7 - Cada atributo de subclasse é criado e inicializado com valores default ou valores definidos na declaração
-8 - Os blocos de inicialização de instância da subclasse são executados, na ordem em que aparecem
-9 - O construtor da subclasse é chamado
+Um método ou atributo pode receber o modificador `static` para os casos que o seu resultado independe de um objeto especifico, como é no caso de constantes e calculos matemáticos.
 
 ## Modificador `final`
 
@@ -264,3 +197,70 @@ public void imprimirNomeFinal(final String nome) {
     nome = "Outro nome"; // erro de compilação
 }
 ```
+
+## Bloco de Inicialização de Instância
+
+É um bloco de código que será sempre executado quando objeto daquela classe é criado. Podem ser usados para iniciar variáveis de classe ou realizar configurações no objeto quando instanciado. Um bloco de inicialização tem acesso a todos os métodos e atributos da classe.
+
+Os blocos de inicialização são definidos ao abrir e fechar chaves fora de qualquer método ou construtor. Exemplo:
+
+```java
+public class Anime {
+    private String nome;
+    private int[] episodios;
+
+    {
+        System.out.println("Dentro do bloco de inicialização");
+        episodios = new int[100];
+        for (int i = 0; i < episodios.length; i++) {
+            episodios[i] = i + 1;
+        }
+    } // este é o bloco de inicialização
+
+    public Anime(String nome){
+        this.nome = nome;
+    }
+
+    public Anime() {
+
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int[] getEpisodios() {
+        return episodios;
+    }
+
+    public void setEpisodios(int[] episodios) {
+        this.episodios = episodios;
+    }
+}
+```
+
+Como podem ser usados:
+
+- Quando a lógica de inicialização não  se encaixa bem em construtores.
+- Quando a lógica de inicialização depende de condições específicas verificadas no tempo de excução.
+- Quando é preciso configurar vários aspectos do objeto antes que qualquer outro código seja executado.
+
+__*OBS:*__ Pode haver mais de um bloco de inicialização por classe e eles serão executados na ordem em que estão dispostos dentro dela.
+
+## Ordem de execução de um objeto
+
+Ao instanciar uma classe, a JVM segue uma ordem específica de execução, considerando os elementos definidos nas classes envolvidas (superclasse e subclasse). A sequência geral é a seguinte: 
+
+1 - O bloco de inicialização estático da superclasse é executado uma única vez, quando a JVM carrega a classe pai
+2 - O bloco de inicialização estático da subclasse é executado uma única vez, quando a JVM carrega a classe filha
+3 - É alocado espaço em memória para o objeto da subclasse (o espaço para a superclasse é incluído automaticamente como parte do objeto)
+4 - Cada atributo de superclasse é criado e inicializado com valores default ou valores definidos na declaração
+5 - Os blocos de inicialização de instância da superclasse são executados, na ordem em que aparecem
+6 - O construtor da superclasse é chamado
+7 - Cada atributo de subclasse é criado e inicializado com valores default ou valores definidos na declaração
+8 - Os blocos de inicialização de instância da subclasse são executados, na ordem em que aparecem
+9 - O construtor da subclasse é chamado
