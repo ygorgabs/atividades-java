@@ -261,14 +261,26 @@ As classes e métodos podem ser abstratas ou finais. Conceito:
 
 ## Interfaces
 
-Lista de serviços fornecidas por um componente. É o contato externo, que define o que pode ser feito com um objeto dessa classe.
+Uma interface define um contrato que uma classe pode assinar, ou seja, é uma lista de serviços (métodos) que um componente deve fornecer. Ela descreve o comportamento esperado, sem definir sua implementação. Geralmente são declaradas em arquivos separados das classes que as implementam.
 
-As interfaces não possuem atributos, somente métodos. Esses são métodos abstratos, pois não executam ação dentro do método, apenas indica a ação que será realizada. Todos os métodos da interface são publicos.
+As interfaces podem conter atributos constantes e métodos abstratos. Os métodos definidos em interfaces não possuem corpo, apenas a assinatura. 
 
-A interface é implementada em um arquivo diferente da classe.
-
-* No Java utilizamos o modificador `abstract` nos métodos criados dentro das interfaces
+* O Java presume que todos os métodos declarados na interface são públicos e abstratos, não sendo obrigatório o uso dos modificadores `abstract`e `public`.
 * Para implentar uma interface numa classe usamos o `implements`. Exemplo: `public class ControleRemoto implements Controlador`
+* É possível implementar mais de uma interface em uma classe, sendo somente necessário listá-las após o `implements`. Exemplo: `public class DatabaseLoader implements DataLoader, DataRemover`
+* A partir do Java 8 é possível criar métodos concretos em interfaces utilizando o modificador `default`. Exemplo:
+
+```java
+public interface DataLoader {
+    void load();
+    
+    default void checkData(){
+        System.out.println("Checando os dados...");
+    }
+}
+```
+* Os atributos de uma interface são sempre constantes estáticas. Não é obrigatório o uso dos modificadores `final` e `static` para declará-las.
+* Também é possível declarar métodos estáticos em interfaces.
 
 ## Enum 
 
