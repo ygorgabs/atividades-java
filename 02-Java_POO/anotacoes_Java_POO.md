@@ -378,3 +378,37 @@ No Polimorfismo de Sobrecarga utilizamos vários métodos com o mesmo nome, por�
 **RESUMO**
 
 ![Tipos de Polimorfismo](image.png)
+
+### Parâmetros polimórficos
+
+Um parâmetro polimórfico acontece quando na assinatura do método é solicitado como parâmetro um objeto de tipo genérico, que serviu de superclasse, ou uma Interface. Isso permite que possa ser utilizada qualquer uma de suas subclasses como argumentos na hora de chamar o método.
+
+Exemplo: Suponha que exista a classe Produto, que é superclasse de Computador e TV. Se criarmos um método de calcular imposto usando Produto como parâmetro, é possivel passar Computador e TV como argumento ao chamar o método
+
+```java
+public class CalculadoraImposto {
+
+    public static void calcularImposto(Produto produto){
+        System.out.println("Relatório de Imposto");
+        double imposto = produto.calcularImposto();
+        System.out.println("Produto: " + produto.getNome());
+        System.out.println("Preço: " + produto.getValor());
+        System.out.println("Imposto a ser pago: " + imposto);
+    }
+}
+```
+
+```java
+public class ProdutoTest01 {
+    public static void main(String[] args) {
+        Computador computador = new Computador("NUC10i7", 11000);
+        Televisao tv = new Televisao("Samsung 50\"", 5000);
+        CalculadoraImposto.calcularImposto(computador);
+        System.out.println("------------------------");
+        CalculadoraImposto.calcularImposto(tv);
+
+    }
+}
+```
+
+A principal vantagem é a flexibilidade: o método calcularImposto funciona para qualquer tipo de produto, sem precisar sobrecarregá-lo para cada tipo específico.
