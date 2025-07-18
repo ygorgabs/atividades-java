@@ -412,3 +412,34 @@ public class ProdutoTest01 {
 ```
 
 A principal vantagem é a flexibilidade: o método calcularImposto funciona para qualquer tipo de produto, sem precisar sobrecarregá-lo para cada tipo específico.
+
+### Cast e instanceof
+
+Cast ou type cast é o processo de converter um tipo de dado em outro.
+
+
+- *Casting implícito* ocorre quando há a conversão de um tipo primitivo menor para o maior. Geralmente essa conversão ocorre automaticamente pela linguagem, pois não há uma perda de dados. Exemplo:
+
+```java
+int numero = 10;
+long numeroMaior = numero;
+```
+- *Casting explícito* ocorre quando há a conversão de um tipo primitivo maior para um menor e pode haver perda de dados. Essa conversão é feita manualmente. Exemplo:
+
+```java
+double valor = 9.7;
+int inteiro = (int) valor; 
+System.out.println(inteiro); 
+```
+
+- *Upcasting* semelhante ao casting implícito, porém ocorre com variáveis do tipo referência. Converte um objeto da subclasse para um da superclasse. Ocorre automaticamente.
+- *Downcast* Semelhante ao cast explícito. É a conversão manual de um objeto da superclasse para um da subclasse.
+- `instanceof`: palavara reservada no java, que tem como função verificar se um objeto é uma instancia de determinada classe. O retorno será um boolean. Exemplo: 
+
+```java
+if(produto instanceof Tomate){
+            String dataValidade = ((Tomate)produto).getDataValidade();
+            System.out.println("Data de Validade: " + dataValidade);
+        }
+
+```
